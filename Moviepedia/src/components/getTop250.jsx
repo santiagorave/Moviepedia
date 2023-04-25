@@ -27,8 +27,8 @@ function GetData() {
       <i className="fa-solid fa-chevron-left"></i>
       {movies.length > 0 && (
         <>
-          {movies.slice(0, 6).map(user => (
-            <img className='poster' key={user.id} src={user.image} />
+          {movies.slice(0, 6).map(movie => (
+            <img className='poster' key={movie.id} src={movie.image} />
 
           ))}
         </>
