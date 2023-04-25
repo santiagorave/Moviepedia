@@ -1,9 +1,11 @@
 function Nav(){
+
+      
     return(
     <nav>
-        <h4> Logo </h4>
+        <h1> Logo </h1>
 
-        <form action="#">
+        <form action="#">   
             <section>
                 <input type="text" placeholder="" name="search"></input>
                 <button type="submit" id="searchBtn">

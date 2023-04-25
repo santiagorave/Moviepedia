@@ -21,7 +21,7 @@ nav {
     background-color: #394867;
     align-items: center;
 
-    h4 {
+    h1 {
         width: 20%;
         padding-left: 10vh;
     }
@@ -67,5 +67,29 @@ nav {
        }
     }
 
+  
+
+}
+.poster {
+    width: 25vh;
+    height: 35vh;
+    border-radius: 1vh;
+}
+
+.movieContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+    padding: 4vh;
+
+    article {
+    display: flex;
+        justify-content: space-around;
+    align-items: center;
+
+    }
+    i{
+        font-size: 40px;
+    }
 
 }
