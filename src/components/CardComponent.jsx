@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function CardComponent(props) {
   const [modal, setModal] = useState(false);
+
     const clickHandler = function(){
         setModal(!modal);
       }
@@ -10,7 +11,8 @@ function CardComponent(props) {
         setModal(data);
       }
 
-    
+
+ 
 
     return (
         <>  
