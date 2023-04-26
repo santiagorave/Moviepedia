@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
 import LoadingSpinner from './Spinner';
+import Modal from './modal';
+import CardComponent from './CardComponent';
+
 function GetData() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -20,10 +23,8 @@ function GetData() {
     getElements()
 
   }, [])
-  console.log(movies.slice(4, 9));
-
   return (
-
+    <>
     <section className='movieContainer'>
       <h2>Top 250 Movies of All Time</h2>
       <article>
@@ -31,8 +32,7 @@ function GetData() {
       {isLoading ? <LoadingSpinner/>: (
         <>
           {movies.slice(0, 6).map(movie => (
-            <img className='poster' key={movie.id} src={movie.image} />
-
+            <CardComponent key={movie.id} movieData={movie}/>
           ))}
         </>
 
@@ -40,6 +40,7 @@ function GetData() {
       <i className="fa-solid fa-chevron-right"></i>
       </article>
     </section>
+    </>
   )
 
 
