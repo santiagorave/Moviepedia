@@ -208,6 +208,8 @@ nav {
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 2vh;
     article {
       display: flex;
@@ -223,7 +225,42 @@ nav {
       row-gap: 1vh;
     }
     figure {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1vh;
       width: 30%;
+      p {
+        text-align: justify;
+      }
+    }
+
+    span {
+      width: 1%;
+    }
+
+    .actors {
+      display: flex;
+      column-gap: 4vh;
+      padding-right: 7vw;
+      img {
+        width: 15vh;
+        height: 18vh;
+        border-radius: 50%;
+      }
+      figure {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        p{
+        text-align: center;
+
+        }
+      }
+    }
+    .secondContainer{
+      display: flex;
+      justify-content: space-between;
     }
 
   }
