@@ -22,9 +22,11 @@ function Modal(props) {
 
     useEffect(() => {
         const API_KEY = "k_5w96icwm";
-        // const API_URL = `https://imdb-api.com/en/API/Title/${API_KEY}/${props.movieData.id}/Trailer,`;
+        const API_KEY_PLATFORM="d85kYSxRrSvSdKsv9deB4tPyy6NJ7Damby0TAmMA"
+        // const API_URL = `https://imdb-api.com/en/API/Title/${API_KEY}/${props.movieData.id}/Trailer,FullCast,`;
         const API_URL = "/src/data/responseTest.json";
         const PLATFORM_DUMMY = "/src/data/responsePlat.json";
+        // const API_PLATFORM=`https://api.watchmode.com/v1/title/${props.movieData.id}/sources/?apiKey=${API_KEY_PLATFORM}&regions=US`
         fetch(API_URL)
             .then(response => response.json()).then(data => {
                 setLoading(false)
@@ -41,7 +43,6 @@ function Modal(props) {
             )
 
     }, [])
-    let counter = 0;
     return (
         <>
             <div id="myModal" className="modal">
@@ -72,7 +73,7 @@ function Modal(props) {
                                     })}
                                 </section>
                                 <section className="actors">
-                                    {fullDetails.actorList.slice(0, 5).map(actor =>
+                                    {fullDetails?.actorList?.slice(0, 5).map(actor =>
 
                                         <figure key={actor.id}>
                                             <img src={actor.image} alt={actor.name} />
