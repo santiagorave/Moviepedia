@@ -7,8 +7,19 @@ function Modal(props) {
     const [fullDetails, setfullDetails] = useState({});
     const [platforms, setPlatforms] = useState([]);
     const [isLoading, setLoading] = useState(true);
+    const [platformIcons,setIcons] = useState({
+        "HBO MAX":"/src/data/square social logo 400 x 400_0.webp",
+        "Netflix":"/src/data/Netflix_2015_logo.svg",
+        "Hulu": "/src/data/Hulu_logo_(2014).svg",
+        "Amazon Prime":"/src/data/Amazon_Prime_Video_logo.svg",
+        "Disney+":"/src/data/Disney+_logo.svg",
+        "AppleTV+":"/src/data/Apple_TV_Plus_Logo.svg",
+        "Hayu":"/src/data/Hayu_Logo_Coral_svg.svg",
+        "Paramount+":"/src/data/Paramount+_logo.svg",
+        "Showtime": "/src/data/Showtime.svg",
+        "Crave":"/src/data/Crave_2018_logo.svg"
+    });
 
-    console.log("render");
     useEffect(() => {
         const API_KEY = "k_5w96icwm";
         // const API_URL = `https://imdb-api.com/en/API/Title/${API_KEY}/${props.movieData.id}/Trailer,`;
@@ -30,7 +41,7 @@ function Modal(props) {
             )
 
     }, [])
-    let counter=0;
+    let counter = 0;
     return (
         <>
             <div id="myModal" className="modal">
@@ -40,20 +51,24 @@ function Modal(props) {
                         <div>
                             <span onClick={closeModal} className="close">&times;</span>
                             <article>
-                                <figure>
+                                <figure className="posterFigure">
                                     <img className="posterDesc" src={props.movieData.image} alt={props.movieData.title} />
                                     <figcaption>{props.movieData.fullTitle}</figcaption>
                                     <p>{fullDetails.plot}</p>
                                 </figure>
                                 <aside>
                                     <h2>{props.movieData.title}</h2>
-                                    <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="270" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
+                                    <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=480`} width="480" height="270" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
                                 </aside>
                             </article>
                             <div className="secondContainer">
                                 <section className="platforms">
-                                    { platforms.filter(platform => platform.type=="sub").map(plat=> {
-                                   return <p key={counter++}>{plat.name}</p>
+                                    {platforms.filter(platform => platform.type == "sub").map(plat => {
+                                        return (
+                                            <a key={plat.name} target="_blank" href={plat.web_url}>
+                                                <img src={platformIcons[plat.name]} alt="" />
+                                            </a>
+                                        )
                                     })}
                                 </section>
                                 <section className="actors">
