@@ -17,7 +17,15 @@ function Modal(props) {
         "Hayu":"/src/data/Hayu_Logo_Coral_svg.svg",
         "Paramount+":"/src/data/Paramount+_logo.svg",
         "Showtime": "/src/data/Showtime.svg",
-        "Crave":"/src/data/Crave_2018_logo.svg"
+        "Crave":"/src/data/Crave_2018_logo.svg",
+        "Peacock Premium":"/src/data/NBCUniversal_Peacock_Logo.svg",
+        "Crave Starz":"/src/data/Crave_2018_logo.svg",
+        "Stan":"/src/data/stan-sport-logo-BCB97A49EA-seeklogo.com.png",
+        "STARZ":"/src/data/Starz_2022.svg",
+        "Foxtel Now": "/src/data/Foxtel_logo_2020.svg",
+        "Sky Go":"/src/data/Logo_Sky_Go.svg",
+        "Now TV":"/src/data/Now_logo.svg",
+        "BINGE":"/src/data/Binge_logo.svg"
     });
 
     useEffect(() => {
