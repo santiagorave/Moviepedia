@@ -1,6 +1,6 @@
 function CarrouselFig(props){
     return(
-        <figure className="slides">
+        <figure className="slides" id={props.id}>
             <img src={props.src} alt={props.id}/>
             <figcaption>
             {/* features coming with the slides */}

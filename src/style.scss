@@ -229,17 +229,19 @@ nav {
   height: 5vh;
 }
 .company > a{
+  border: 1px solid transparent;
+  border-radius: 5px;
   background-color: #394867;
   text-decoration: none;
   color: white;
   font-weight: 600;
-  padding: 2vh;
+  padding: 1vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 1vh;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   &:hover{
     background-color:#888;
     transition: .5s;
@@ -247,13 +249,39 @@ nav {
 }
 .MainC{
   display: flex;
+  justify-content: space-around;
 }
 .liked, .watched{
   width: 35%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 #slides{
   display: flex;
+}
+.slides > img{
+  width: 20vh;
+  height: 30vh;
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+.slides{
+  display: none;
+}
+#slide1{
+  display:unset ;
+}
+.liked{
+  background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.watched{
+  background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
 }
   
