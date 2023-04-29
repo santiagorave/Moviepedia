@@ -218,5 +218,42 @@ nav {
     cursor: pointer;
   }
 
- 
+//carrousel
+
+.slide1,
+.slide2{
+  display:none;
+}
+.company img{
+  width: 5vh;
+  height: 5vh;
+}
+.company > a{
+  background-color: #394867;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 2vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1vh;
+  font-size: 1.3rem;
+  &:hover{
+    background-color:#888;
+    transition: .5s;
+  }
+}
+.MainC{
+  display: flex;
+}
+.liked, .watched{
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+}
+#slides{
+  display: flex;
+}
   
