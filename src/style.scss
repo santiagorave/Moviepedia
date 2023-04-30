@@ -254,7 +254,7 @@ nav {
   justify-content: space-around;
 }
 .liked, .watched{
-  width: 49%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   border: 1px solid transparent;
@@ -287,22 +287,24 @@ nav {
   background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg");
   background-position: center;
   background-repeat: none;
-  background-size: cover;
+  background-size:contain;
 }
 
-#left{
+#likel{
   display: flex;
   position: absolute;
   bottom: 65%;
-  left: 20px;
-  font-size: 2rem;
+  left: 7%;
+  font-size: 2.2rem;
+  color: lightgrey;
 }
-#right{
-  font-size: 2rem;
+#liker{
+  font-size: 2.2rem;
   display: flex;
   position: absolute;
   bottom: 65%;
-  right: 20px;
+  right: 7%;
+  color: lightgrey;
 }
 
   

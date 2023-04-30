@@ -27,8 +27,8 @@ function CarrouselSec(props){
                  <CarrouselFig id="slide3" src="https://lumiere-a.akamaihd.net/v1/images/p_cars_19643_4405006d.jpeg"/> 
             </div>
             <div id="navigation">
-                <i className="fa-solid fa-chevron-left" id="left"></i>
-                <i className="fa-solid fa-chevron-right" id="right"></i>
+                <i className="fa-solid fa-chevron-left" id={props.left}></i>
+                <i className="fa-solid fa-chevron-right" id={props.right}></i>
             </div>
         </section>
     );
@@ -37,8 +37,8 @@ function CarrouselSec(props){
 function MainCarrousel(){
     return(
         <section className="MainC">
-            <CarrouselSec id="liked" title="MOST LIKED MOVIES"/>
-            <CarrouselSec id="watched" title="MOST WATCHED MOVIES"/>
+            <CarrouselSec id="liked" title="MOST LIKED MOVIES" left="likel" right="liker"/>
+            
         </section>
     );
 }
