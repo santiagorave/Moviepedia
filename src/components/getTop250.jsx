@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import LoadingSpinner from './Spinner';
 import CardComponent from './CardComponent';
 
-function GetData() {
+function GetData(props) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [page,setPage] = useState([0,6]);
 
   const getElements = function () {
-    fetch('/src/data/Top250.json').then((data) => {
+    fetch(props.data).then((data) => {
       return data.json()
     }).then(data => {setMovies(data.items); setLoading(false)});
   }
@@ -33,7 +33,7 @@ function GetData() {
   return (
     <>
     <section className='movieContainer'>
-      <h2>Top 250 Movies of All Time</h2>
+      <h2>{props.title}</h2>
       <article>
       <i onClick={handlePaginationPrev} className="fa-solid fa-chevron-left"></i>
       {isLoading ? <LoadingSpinner/>: (
