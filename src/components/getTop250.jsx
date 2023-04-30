@@ -1,18 +1,11 @@
 import { useState, useEffect } from 'react';
 import LoadingSpinner from './Spinner';
-import Modal from './modal';
 import CardComponent from './CardComponent';
 
 function GetData() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [page,setPage] = useState([0,6]);
-  // async function logJSONData() {
-  //     let response = await fetch('/src/data/Top250.json');
-  //        let data = await response.json();
-  //        console.log(data.items)
-  //   }
-  //   logJSONData();
 
   const getElements = function () {
     fetch('/src/data/Top250.json').then((data) => {
@@ -24,7 +17,6 @@ function GetData() {
     if(!newValue.find(el=>el<0)) {
     setPage(newValue);
     }
-    console.log(!page.find(el=>el==0))
 
   }
   const handlePaginationNext = function() {
@@ -32,7 +24,6 @@ function GetData() {
     if(!newValue.find(el=>el>252)) {
       setPage(newValue);
       }
-      console.log(...newValue)
   }
 
   useEffect(() => {
