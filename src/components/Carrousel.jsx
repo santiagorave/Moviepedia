@@ -5,8 +5,8 @@ function CarrouselFig(props){
             <figcaption>
             {/* features coming with the slides */}
                 <article>
-                    <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-bookmark"></i>
+                    <i className="fa-solid fa-heart"></i>
+                    <i className="fa-solid fa-bookmark"></i>
                 </article>
                 <aside className="company">
                     <a href="" ><img src="https://cdn.vox-cdn.com/thumbor/sW5h16et1R3au8ZLVjkcAbcXNi8=/0x0:3151x2048/2000x1333/filters:focal(1575x1024:1576x1025)/cdn.vox-cdn.com/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png"/>Watch Now</a>
@@ -27,8 +27,8 @@ function CarrouselSec(props){
                  <CarrouselFig id="slide3" src="https://lumiere-a.akamaihd.net/v1/images/p_cars_19643_4405006d.jpeg"/> 
             </div>
             <div id="navigation">
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-left" id="left"></i>
+                <i className="fa-solid fa-chevron-right" id="right"></i>
             </div>
         </section>
     );
@@ -37,8 +37,8 @@ function CarrouselSec(props){
 function MainCarrousel(){
     return(
         <section className="MainC">
-            <CarrouselSec id="liked" title="Most Liked Movies"/>
-            <CarrouselSec id="watched" title="Most Watched Movies"/>
+            <CarrouselSec id="liked" title="MOST LIKED MOVIES"/>
+            <CarrouselSec id="watched" title="MOST WATCHED MOVIES"/>
         </section>
     );
 }

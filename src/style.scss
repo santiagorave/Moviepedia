@@ -227,6 +227,8 @@ nav {
 .company img{
   width: 5vh;
   height: 5vh;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 .company > a{
   border: 1px solid transparent;
@@ -252,12 +254,15 @@ nav {
   justify-content: space-around;
 }
 .liked, .watched{
-  width: 35%;
+  width: 49%;
   display: flex;
   flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 8px;
 }
 #slides{
   display: flex;
+  justify-content: center;
 }
 .slides > img{
   width: 20vh;
@@ -284,4 +289,20 @@ nav {
   background-repeat: none;
   background-size: cover;
 }
+
+#left{
+  display: flex;
+  position: absolute;
+  bottom: 65%;
+  left: 20px;
+  font-size: 2rem;
+}
+#right{
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 65%;
+  right: 20px;
+}
+
   
