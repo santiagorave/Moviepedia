@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1080px" height="220px" viewBox="0 0 1080 220" style="enable-background:new 0 0 1080 220;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EB5205;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{mask:url(#l0bpj396nb_1_);}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#F2410A;}
+</style>
+<g>
+	<g>
+		<g transform="translate(-130 -19) translate(130 19)">
+			<g>
+				<path id="ir8dije37a_1_" class="st0" d="M128.4,48.6l15.3-45.9H0v214h52v-77h64.2l15.3-45.9H51.9V48.6
+					C51.9,48.6,128.4,48.6,128.4,48.6z M264.1,0c-44.4-0.1-84.6,26.7-101.6,67.7c-17.1,41-7.7,88.3,23.7,119.8
+					c31.4,31.5,78.6,40.9,119.7,24c41.1-17,67.9-57,68-101.5C373.8,49.4,324.8,0.2,264.1,0z M264.1,167.5
+					c-23.3,0.1-44.4-14-53.4-35.5c-9-21.5-4-46.4,12.5-62.9c16.5-16.5,41.3-21.4,62.9-12.5c21.5,9,35.6,30,35.5,53.4
+					C321.6,141.8,295.8,167.5,264.1,167.5L264.1,167.5z M555.4,2.8h-58.1l-36.4,58.4L424.3,2.8h-58.1l65.7,104.4l-68.8,109.5h58.1
+					l39.8-63l39.4,63h58.1L490,107.2L555.4,2.8L555.4,2.8z M560,48.6h63.3v168.1h52V48.6h55V2.7H588.7L560,48.6L560,48.6z M887,48.6
+					l15.3-45.9H758.6v214H887l15.3-45.9h-91.7v-40.9h64.2l15.3-45.9h-79.5V48.6L887,48.6L887,48.6z M983,170.8V2.7h-52v214h128.4
+					l15.4-45.9H983z"/>
+			</g>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="1080" height="220">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="220" id="l0bpj396nb_1_">
+				<g class="st1">
+					<path id="ir8dije37a_2_" class="st2" d="M128.4,48.6l15.3-45.9H0v214h52v-77h64.2l15.3-45.9H51.9V48.6
+						C51.9,48.6,128.4,48.6,128.4,48.6z M264.1,0c-44.4-0.1-84.6,26.7-101.6,67.7c-17.1,41-7.7,88.3,23.7,119.8
+						c31.4,31.5,78.6,40.9,119.7,24c41.1-17,67.9-57,68-101.5C373.8,49.4,324.8,0.2,264.1,0z M264.1,167.5
+						c-23.3,0.1-44.4-14-53.4-35.5c-9-21.5-4-46.4,12.5-62.9c16.5-16.5,41.3-21.4,62.9-12.5c21.5,9,35.6,30,35.5,53.4
+						C321.6,141.8,295.8,167.5,264.1,167.5L264.1,167.5z M555.4,2.8h-58.1l-36.4,58.4L424.3,2.8h-58.1l65.7,104.4l-68.8,109.5h58.1
+						l39.8-63l39.4,63h58.1L490,107.2L555.4,2.8L555.4,2.8z M560,48.6h63.3v168.1h52V48.6h55V2.7H588.7L560,48.6L560,48.6z
+						 M887,48.6l15.3-45.9H758.6v214H887l15.3-45.9h-91.7v-40.9h64.2l15.3-45.9h-79.5V48.6L887,48.6L887,48.6z M983,170.8V2.7h-52
+						v214h128.4l15.4-45.9H983z"/>
+				</g>
+			</mask>
+			<g class="st3">
+				<path class="st4" d="M0,0h1080v220H0V0z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
