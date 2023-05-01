@@ -203,7 +203,7 @@ function Modal(props) {
                                 </section>
                             </div>
                             <div className="actors">
-                                {fullDetails?.actorList?.slice(0, 7).map(actor =>
+                                {fullDetails?.actorList?.slice(0, 6).map(actor =>
 
                                     <figure key={actor.id}>
                                         <img src={actor.image} alt={actor.name} />
