@@ -20,7 +20,7 @@ class User {
     #disliked = [];
     #picture = null;
 
-    constructor (id,name,email,password,genre,playlists,liked,disliked,picture) {
+    constructor (id,name,email,password,genre,playlists=[],liked=[],disliked=[],picture='') {
         
         this.#id = id;
         this.#name = name;

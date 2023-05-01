@@ -4,7 +4,7 @@ import GetData from './components/GetData'
 import LoginModal from './components/loginModal';
 import SignUpModal from './components/SignUpModal';
 
-
+// father 
 function App() {
 
   const GET_250_DATA="/src/data/Top250.json";
@@ -12,18 +12,28 @@ function App() {
   const GET_TV="/src/data/Popular-TV.json";
   const GET_SOON="/src/data/ComingSoon.json";
 
-  // but default the methods are hidden: useState(false);
+  // by default the methods are hidden: useState(false);
   const [modalLogin, setModalLogin] = useState(false);
   const [signUp, setModalsignUp] = useState(false);
+  //by the fault the the variable is an object
+  const [userLogged, setUserLogged] = useState({});
 
+  // fuction to pass to the son so it ill be executed
+  const userHandler = function(userObject) {
+    setUserLogged(userObject)
+  }
 
+  console.log(userLogged)
+
+  {/* sons */}
   return (
     <>
     {/* if modalLogin is true : <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} /> happens */}
     {modalLogin && <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
-    {signUp && <SignUpModal modalSignUpState={setModalsignUp}/>}
+    {/* give the function userHandler to the son */}
+    {signUp && <SignUpModal userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}
     <Nav modalLoginState={setModalLogin}/>
     <GetData title={"Most Popular"} data={GET_POPULAR}/>

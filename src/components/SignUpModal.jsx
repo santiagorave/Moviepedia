@@ -1,4 +1,6 @@
 import { useRef } from "react";
+// classes 
+import User from '/src/classes/User.js'
 
 function SignUpModal (props){
 
@@ -6,7 +8,7 @@ function SignUpModal (props){
         props.modalSignUpState(false)
     }
 
-
+    // references by default are null
     const username = useRef(null);
     const email = useRef(null);
     const password = useRef(null);
@@ -19,6 +21,10 @@ function SignUpModal (props){
         let Useremail = email.current.value;
         let Userpassword = password.current.value;
         let UserGenre = genre.current.value;
+        
+        // gets the function (userHandler) and pass a new User
+        props.userCallback(new User(1,user,Useremail,Userpassword,UserGenre))
+
         console.log(user,Useremail,Userpassword,UserGenre)
     
     }
@@ -32,6 +38,7 @@ function SignUpModal (props){
             <h4> Create User </h4>
 
             <form>
+                {/* ref={x} x is like the id */}
                 <input ref={username} type="text" name="Username" id="Username" placeholder="username"/>
                 <input ref={email} type="email" name="email" id="email" placeholder="your email" />
                 <input ref={password} type="password" name="password"id="password" placeholder="password"/>
@@ -43,7 +50,7 @@ function SignUpModal (props){
                 </select>
                 <article>
                 <button onClick={formHandler} type="submit" id="createUserBtn">
-                    Create User
+                    Create User and login
                 </button>
             </article>
             </form>
