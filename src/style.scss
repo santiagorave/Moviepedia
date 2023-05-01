@@ -95,15 +95,21 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    >i {
+      font-size: 40px;
+      cursor: pointer;
+      transition: .4s;
+      &:hover{
+        transform: scale(1.3);
+      }
+    }
 
   }
 
-  i {
-    font-size: 40px;
-  }
+ 
 
 }
+
 
 .lds-roller {
   display: inline-block;
@@ -248,76 +254,6 @@ nav {
   align-items: center;
   row-gap: 2vh;
 
-  article {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-
-  }
-
-  aside {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 3vh;
-  }
-
-  figure {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1vh;
-    width: 30%;
-
-    p {
-      text-align: justify;
-    }
-  }
-
-  span {
-    width: 1%;
-  }
-
-  .actors {
-    display: flex;
-    column-gap: 4vh;
-    padding-right: 7vw;
-
-    img {
-      width: 14vh;
-      height: 16vh;
-      border-radius: 50%;
-    }
-
-    figure {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-
-      p {
-        text-align: center;
-
-      }
-    }
-  }
-
-  .secondContainer {
-    display: flex;
-    justify-content: space-between;
-
-    .platforms {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      column-gap: 4vw;
-      width: 20%;
-
-      img {
-        width: 10vh;
-        height: 10vh;
-      }
-    }
-  }
 
 }
 
@@ -336,50 +272,119 @@ nav {
   cursor: pointer;
 }
 
-.trailerFeatures {
-  display: flex;
-  column-gap: 4vh;
-  text-align: center;
-}
 
-.icons {
-  display: flex;
-  justify-content: center;
-  column-gap: 5vh;
-  padding-top: 3vh;
 
-  i {
-    font-size: 50px;
-    cursor: pointer;
+
+
+.newContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8vh;
+  aside {
+    display: flex;
+    justify-content: end;
   }
+  section {
+    display: flex;
+    column-gap: 4vh;
+  }
+  .details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vh;
+    width: 49%;
+    h2{
+      font-size: 45px;
+    }
+    .buttons {
+      display: flex;
+      button {
+        &:nth-child(1){
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        &:nth-child(3){
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        background-color: whitesmoke;
+        padding: 1vh;
+        border: none;
+        display: flex;
+        align-items: center;
+        column-gap: 1vh;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover .fa-thumbs-up {
+          color: green;
+        }
+        &:hover .fa-thumbs-down {
+          color: red;
+        }
+        &:hover .fa-bookmark {
+          color: #fbda23;
+        }
 
-  .fa-thumbs-down {
-    transform: scaleX(-1);
-    transition: .4s;
-
-    &:hover {
-      color: red;
+        i {
+          font-size: 25px;
+          color: #394867;
+        }
+      }
     }
   }
-
-  .fa-thumbs-up {
-    transition: .4s;
-
-    &:hover {
-      color: green;
+  .platforms {
+    display: flex;
+    column-gap: 4vh;
+    img {
+      width: 10vh;
+      height: 10vh;
     }
   }
-}
+  .actors {
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    img {
+      width: 20vh;
+      height: 21vh;
+      border-radius: 10px;
+      transition: .6s;
 
-.AddTo {
-  display: flex;
-  padding-top: 10vh;
-  column-gap: 4vh;
-  align-items: center;
-  transition: .4s;
-  cursor: pointer;
+    }
+    figure {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      overflow: hidden;
 
-  &:hover {
-    color: #fbda23;
+      &:hover figcaption  {
+      height: 21vh;
+      }
+      &:hover img  {
+      opacity: .6;
+        }
+
+    figcaption {
+      position: absolute;
+      height: 27vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      transition: .6s;
+      p {
+        text-align: center;
+      width: 100%;
+
+      background-color: black;
+
+
+      }
+    }
+
+    }
+
   }
 }
