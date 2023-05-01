@@ -171,36 +171,49 @@ function Modal(props) {
                         //     </div>
                         // </div>
                         <div className="newContainer">
-                            <aside>
-                                <span onClick={closeModal} className="close floatclass">&times;</span>
-                            </aside>
-                            <section>
-                                <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="400" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
-                                <div className="details">
-                                    <small>
-                                        {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
-                                    </small>
-                                    <h2>{props.movieData.fullTitle}</h2>
-                                    <p>{fullDetails.plot}</p>
-                                    <div className="buttons">
-                                        <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
-                                        <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
-                                        <button><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+                            <div>
+                                <aside>
+                                    <span onClick={closeModal} className="close floatclass">&times;</span>
+                                </aside>
+                                <section>
+                                    <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="400" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
+                                    <div className="details">
+                                        <small>
+                                            {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
+                                        </small>
+                                        <h2>{props.movieData.fullTitle}</h2>
+                                        <p>{fullDetails.plot}</p>
+                                        <div className="buttons">
+                                            <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                            <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
+                                            <button><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+
+                                        </div>
+                                        <div className="platforms">
+                                            {platforms.filter(platform => platform.type == "sub").slice(0, 3).map(plat => {
+                                                return (
+                                                    <a key={plat.name} target="_blank" href={plat.web_url}>
+                                                        <img src={platformIcons[plat.name]} alt="" />
+                                                    </a>
+                                                )
+                                            })}
+                                        </div>
 
                                     </div>
-                                    <div className="platforms">
-                                                 {platforms.filter(platform => platform.type == "sub").slice(0,3).map(plat => {
-                                         return (
-                                            <a key={plat.name} target="_blank" href={plat.web_url}>
-                                                 <img src={platformIcons[plat.name]} alt="" />
-                                             </a>
-                                         )
-                                     })}
-                                    </div>
+                                </section>
+                            </div>
+                            <div className="actors">
+                                {fullDetails?.actorList?.slice(0, 7).map(actor =>
 
-                                </div>
-
-                            </section>
+                                    <figure key={actor.id}>
+                                        <img src={actor.image} alt={actor.name} />
+                                        <figcaption>
+                                            <p >{actor.name}</p>
+                                        </figcaption>
+                                    </figure>
+                                )
+                                }
+                            </div>
                         </div>
                     )}
 

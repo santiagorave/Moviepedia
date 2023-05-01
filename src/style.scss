@@ -254,61 +254,6 @@ nav {
   align-items: center;
   row-gap: 2vh;
 
-  // article {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: start;
-
-  // }
-
-  // aside {
-  //   width: 60%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   row-gap: 3vh;
-  // }
-
-  figure {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1vh;
-    width: 30%;
-
-    p {
-      text-align: justify;
-    }
-  }
-
-  
-
-  .actors {
-    display: flex;
-    column-gap: 4vh;
-    padding-right: 3vw;
-
-    img {
-      width: 14vh;
-      height: 16vh;
-      border-radius: 50%;
-    }
-
-    figure {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-
-      p {
-        text-align: center;
-
-      }
-    }
-  }
-
-  .secondContainer {
-    display: flex;
-    justify-content: space-between;
-  }
 
 }
 
@@ -327,62 +272,20 @@ nav {
   cursor: pointer;
 }
 
-.trailerFeatures {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4vh;
-  text-align: center;
-  padding-bottom: 2vh;
-  .test {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
 
-.icons {
-  display: flex;
-  justify-content: center;
-  column-gap: 5vh;
-  padding-top: 3vh;
 
-  i {
-    font-size: 50px;
-    cursor: pointer;
-  }
 
-  .fa-thumbs-down {
-    transform: scaleX(-1);
-    transition: .4s;
-
-    &:hover {
-      color: red;
-    transform: scaleX(-1);
-    }
-  }
-
-}
-
-.AddTo {
-  display: flex;
-  column-gap: 4vh;
-  align-items: center;
-  justify-content: center ;
-  transition: .4s;
-  cursor: pointer;
-
-  &:hover {
-    color: #fbda23;
-  }
-}
 
 .newContainer{
   width: 100%;
-  >aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  aside {
     display: flex;
     justify-content: end;
   }
-  >section {
+  section {
     display: flex;
     column-gap: 4vh;
   }
@@ -438,5 +341,50 @@ nav {
       width: 10vh;
       height: 10vh;
     }
+  }
+  .actors {
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    img {
+      width: 20vh;
+      height: 21vh;
+      border-radius: 10px;
+      transition: .6s;
+
+    }
+    figure {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      overflow: hidden;
+
+      &:hover figcaption  {
+      height: 21vh;
+      }
+      &:hover img  {
+      opacity: .6;
+        }
+
+    figcaption {
+      position: absolute;
+      height: 27vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      transition: .6s;
+      p {
+        text-align: center;
+      width: 100%;
+
+      background-color: black;
+
+
+      }
+    }
+
+    }
+
   }
 }
