@@ -117,56 +117,90 @@ function Modal(props) {
                 <div className="modal-content">
 
                     {(isLoading) ? <LoadingSpinner /> : (
-                        <div>
-                            <span onClick={closeModal} className="close">&times;</span>
-                            <article>
-                                <figure className="posterFigure">
-                                    <img className="posterDesc" src={props.movieData.image} alt={props.movieData.title} />
-                                    <figcaption>{props.movieData.fullTitle}</figcaption>
+                        // <div>
+                        //     <span onClick={closeModal} className="close">&times;</span>
+                        //     <article>
+                        //         <figure className="posterFigure">
+                        //             <img className="posterDesc" src={props.movieData.image} alt={props.movieData.title} />
+                        //             <figcaption>{props.movieData.fullTitle}</figcaption>
+                        //             <p>{fullDetails.plot}</p>
+                        //         </figure>
+                        //         <aside>
+                        //             <h2>{props.movieData.title}</h2>
+                        //             <div className="trailerFeatures">
+                        //                 <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="337.5" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
+                        //                 <div className="test">
+                        //                     <div>
+                        //                         <h3>Did you like it?</h3>
+                        //                         <div className="icons">
+                        //                             <i className="fa-regular fa-thumbs-up"></i>
+                        //                             <i className="fa-regular fa-thumbs-down"></i>
+                        //                         </div>
+                        //                     </div>
+                        //                     <div className="AddTo">
+                        //                         <i className="fa-regular fa-bookmark"></i>
+
+                        //                         <h3>Add to a playlist</h3>
+                        //                     </div>
+                        //                 </div>
+                        //             </div>
+                        //         </aside>
+                        //     </article>
+                        //     <div className="secondContainer">
+                        //         <section className="platforms">
+                        //             {platforms.filter(platform => platform.type == "sub").map(plat => {
+                        //                 return (
+                        //                     <a key={plat.name} target="_blank" href={plat.web_url}>
+                        //                         <img src={platformIcons[plat.name]} alt="" />
+                        //                     </a>
+                        //                 )
+                        //             })}
+                        //         </section>
+                        //         <section className="actors">
+                        //             {fullDetails?.actorList?.slice(0, 5).map(actor =>
+
+                        //                 <figure key={actor.id}>
+                        //                     <img src={actor.image} alt={actor.name} />
+                        //                     <figcaption>
+                        //                         <p >{actor.name}</p>
+                        //                     </figcaption>
+                        //                 </figure>
+                        //             )
+                        //             }
+                        //         </section>
+                        //     </div>
+                        // </div>
+                        <div className="newContainer">
+                            <aside>
+                                <span onClick={closeModal} className="close floatclass">&times;</span>
+                            </aside>
+                            <section>
+                                <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="400" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
+                                <div className="details">
+                                    <small>
+                                        {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
+                                    </small>
+                                    <h2>{props.movieData.fullTitle}</h2>
                                     <p>{fullDetails.plot}</p>
-                                </figure>
-                                <aside>
-                                    <h2>{props.movieData.title}</h2>
-                                    <div className="trailerFeatures">
-                                        <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=480`} width="480" height="270" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
-                                        <div>
-                                            <h3>Did you like it?</h3>
-                                            <div className="icons">
-                                                <i className="fa-regular fa-thumbs-up"></i>
-                                                <i className="fa-regular fa-thumbs-down"></i>
-                                            </div>
-                                            <div className="AddTo">
-                                                <i className="fa-regular fa-bookmark"></i>
+                                    <div className="buttons">
+                                        <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                        <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
+                                        <button><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 
-                                                <h3>Add to a playlist</h3>
-                                            </div>
-                                        </div>
                                     </div>
-                                </aside>
-                            </article>
-                            <div className="secondContainer">
-                                <section className="platforms">
-                                    {platforms.filter(platform => platform.type == "sub").map(plat => {
-                                        return (
+                                    <div className="platforms">
+                                                 {platforms.filter(platform => platform.type == "sub").slice(0,3).map(plat => {
+                                         return (
                                             <a key={plat.name} target="_blank" href={plat.web_url}>
-                                                <img src={platformIcons[plat.name]} alt="" />
-                                            </a>
-                                        )
-                                    })}
-                                </section>
-                                <section className="actors">
-                                    {fullDetails?.actorList?.slice(0, 5).map(actor =>
+                                                 <img src={platformIcons[plat.name]} alt="" />
+                                             </a>
+                                         )
+                                     })}
+                                    </div>
 
-                                        <figure key={actor.id}>
-                                            <img src={actor.image} alt={actor.name} />
-                                            <figcaption>
-                                                <p >{actor.name}</p>
-                                            </figcaption>
-                                        </figure>
-                                    )
-                                    }
-                                </section>
-                            </div>
+                                </div>
+
+                            </section>
                         </div>
                     )}
 
