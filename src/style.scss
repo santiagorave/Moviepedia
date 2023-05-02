@@ -461,6 +461,8 @@ nav {
   backdrop-filter: blur(10px);
   height: 100vh;
   width: 100vw;
+  z-index: 1000;
+
 
   .SignUpContainer{
     align-items: center;
@@ -534,6 +536,7 @@ nav {
   backdrop-filter: blur(10px);
   height: 100vh;
   width: 100vw;
+  z-index: 1000;
 
   .LoginContainer{
     align-items: center;
@@ -543,6 +546,7 @@ nav {
     height: 50%;
     border-radius: 8px;
     margin: auto;
+
   }
 
   span{
