@@ -275,31 +275,45 @@ nav {
 }
 #slide1{
   display:unset;
+  margin-top: 1vh;
 
 }
 .liked{
+  width: 90%;
+  position: relative;
+
+}
+.liked > article{
   background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg");
-  background-position: center;
+  background-position: 50% 40%;
   background-repeat: no-repeat;
-  background-size:cover;
-  padding: 1vh;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+.liked > section{
+  position: relative;
 }
 
 
 #likel{
   display: flex;
   position: absolute;
-  bottom: 70%;
-  left: 7%;
-  font-size: 2.2rem;
+  bottom: 45%;
+  left: 5%;
+  font-size: 2.4rem;
   color: lightgrey;
 }
 #liker{
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   display: flex;
   position: absolute;
-  bottom: 70%;
-  right: 7%;
+  bottom: 45%;
+  right: 5%;
   color: lightgrey;
 }
 .company{
