@@ -1,5 +1,8 @@
-function Nav(){
+function Nav(props){
 
+    function LogInHandler(){
+        props.modalLoginState(true)
+    }
       
     return(
     <nav>
@@ -13,8 +16,8 @@ function Nav(){
                 </button>
             </section>
         </form>
-        <aside>
-            <h4>Log in</h4>
+        <aside >
+            <h4 onClick={LogInHandler}>Log in</h4>
             <a href="">Profile</a> 
         </aside>
     </nav>)
