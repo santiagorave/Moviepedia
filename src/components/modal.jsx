@@ -58,7 +58,7 @@ function Modal(props) {
         "Britbox (Via Amazon Prime)": "/src/data/BritBox_logo.svg",
         "Cinemax (Via Hulu)": "/src/data/Cinemax_2016.svg",
         "Clarovideo": "/src/data/Logo_de_Claro_Video.svg",
-        "Curiosity Stream": "/src/data/CuriosityStream.svg",
+        "Curiosity Stream (Via Amazon Prime)": "/src/data/CuriosityStream.svg",
         "Darkmatter TV": "/src/data/Dark_Matter_serie_logo.png",
         "Discovery+": "/src/data/Discovery_Plus_logo.svg.png",
         "Epix (Via Amazon Prime)": "/src/data/Epix_Logo_2019.svg",
