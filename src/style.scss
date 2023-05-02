@@ -259,6 +259,10 @@ nav {
   flex-direction: column;
   border: 1px solid transparent;
   border-radius: 21px;
+  &:hover{
+    opacity: 0.5;
+    transition: 1.1s;
+  }
 }
 #slides{
   display: flex;
