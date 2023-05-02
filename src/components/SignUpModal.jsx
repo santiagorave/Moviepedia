@@ -32,28 +32,32 @@ function SignUpModal (props){
     return(
         <section id="SignUpModal" className="SignUpModal">
 
-            {/* calls the function to close the modal */}
-            <span onClick={closeModal} className="close">&times;</span>
+            <section id="SignUpContainer" className="SignUpContainer">
 
-            <h4> Create User </h4>
+                {/* calls the function to close the modal */}
+                <span onClick={closeModal} className="close">&times;</span>
 
-            <form>
-                {/* ref={x} x is like the id */}
-                <input ref={username} type="text" name="Username" id="Username" placeholder="username"/>
-                <input ref={email} type="email" name="email" id="email" placeholder="your email" />
-                <input ref={password} type="password" name="password"id="password" placeholder="password"/>
-                <select name="genre" id="genre" ref={genre}>
-                    <option value="horror">horror</option>
-                    <option value="comedy">comedy</option>
-                    <option value="romance">romance</option>
-                    <option value="thriller">thriller</option>
-                </select>
-                <article>
-                <button onClick={formHandler} type="submit" id="createUserBtn">
-                    Create User and login
-                </button>
-            </article>
-            </form>
+                <h4> Create User </h4>
+
+                <form>
+                    {/* ref={x} x is like the id */}
+                    <input ref={username} type="text" name="Username" id="Username" placeholder="username"/>
+                    <input ref={email} type="email" name="email" id="email" placeholder="your email" />
+                    <input ref={password} type="password" name="password"id="password" placeholder="password"/>
+                    <select name="genre" id="genre" ref={genre}>
+                        <option value="horror">horror</option>
+                        <option value="comedy">comedy</option>
+                        <option value="romance">romance</option>
+                        <option value="thriller">thriller</option>
+                    </select>
+                    <article>
+                    <button onClick={formHandler} type="submit" id="createUserBtn">
+                        Create User and login
+                    </button>
+                </article>
+                </form>
+            </section>
+
 
           
 

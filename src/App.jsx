@@ -29,13 +29,13 @@ function App() {
   return (
     <>
     {/* if modalLogin is true : <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} /> happens */}
+    <Nav modalLoginState={setModalLogin}/>
     {modalLogin && <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
     {/* give the function userHandler to the son */}
     {signUp && <SignUpModal userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}
-    <Nav modalLoginState={setModalLogin}/>
     <GetData title={"Most Popular"} data={GET_POPULAR}/>
     <GetData title={"Popular TV Shows"} data={GET_TV}/>
     <GetData title={"Top 250 Movies of All Time"} data={GET_250_DATA}/>
