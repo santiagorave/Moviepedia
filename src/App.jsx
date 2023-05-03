@@ -29,7 +29,7 @@ function App() {
   return (
     <>
     {/* if modalLogin is true : <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} /> happens */}
-    <Nav userState={userLogged} modalLoginState={setModalLogin}/>
+    <Nav userState={userLogged} userMethod={setUserLogged} modalLoginState={setModalLogin}/>
     {modalLogin && <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}

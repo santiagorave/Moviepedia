@@ -2,7 +2,11 @@ import { Link } from "react-router-dom"
 function Nav(props){
 
     function LogInHandler(){
-        props.modalLoginState(true)
+        if(props.userState.name){
+            props.userMethod({});
+        }else {
+            props.modalLoginState(true);
+        }
     }
      console.log(props.userState.name)
     console.log(props.userState.name? true:false)
