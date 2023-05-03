@@ -264,11 +264,18 @@ nav {
     // opacity: 0;
     transition: 1.2s;
     position: relative;
-    right: 290px;
+    left: 220px;
+  }
+  &:hover figcaption{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2vh;
+    padding-top: 2vh;
   }
   &:hover #bgslide{
     opacity: 0.2;
-    transition: 1.1s;
+    transition: 1s;
   }
 }
 #slides{
@@ -285,8 +292,10 @@ nav {
   display: none;
 }
 #slide1{
-  display:unset;
+  display:flex;
   margin-top: 1vh;
+  flex-direction: row;
+  column-gap: 5vh;
 
 }
 .liked{
@@ -339,6 +348,18 @@ nav {
 }
 figcaption{
   display: none;
+}
+
+.company{
+  width: 70%;
+  display: flex;
+  column-gap: 2vh;
+}
+
+.company > a:nth-child(2){
+  width: 5vh;
+  height: 5vh;
+  
 }
 
   

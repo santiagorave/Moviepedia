@@ -4,12 +4,13 @@ function CarrouselFig(props){
             <img src={props.src} alt={props.id}/>
             <figcaption>
             {/* features coming with the slides */}
-                <article>
-                    <i className="fa-solid fa-heart"></i>
-                    <i className="fa-solid fa-bookmark"></i>
-                </article>
+                <h3>Avatar</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique optio illo accusamus incidunt fuga perspiciatis aut recusandae! Quae, exercitationem numquam?
+                </p>
                 <aside className="company">
-                    <a href="" ><img src="https://cdn.vox-cdn.com/thumbor/sW5h16et1R3au8ZLVjkcAbcXNi8=/0x0:3151x2048/2000x1333/filters:focal(1575x1024:1576x1025)/cdn.vox-cdn.com/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png"/>Watch Now</a>
+                    <a href="#" ><img src="https://cdn.vox-cdn.com/thumbor/sW5h16et1R3au8ZLVjkcAbcXNi8=/0x0:3151x2048/2000x1333/filters:focal(1575x1024:1576x1025)/cdn.vox-cdn.com/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png"/>Watch Now</a>
+                    <a href="#"><i class="fa-solid fa-box-archive"></i></a>
                     {/* src is gonna be a file coming from a class */}
                 </aside>
             </figcaption> 
