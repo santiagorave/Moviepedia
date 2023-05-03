@@ -20,7 +20,7 @@ function CarrouselFig(props){
 function CarrouselSec(props){
     return(
         <section className={props.id}>
-            <article></article>
+            <article id="bgslide"></article>
             <section>
                 <h1>{props.title}</h1>
                 <div id="slides">
