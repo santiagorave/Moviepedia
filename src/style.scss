@@ -25,6 +25,9 @@ nav {
     width: 20%;
     padding-left: 10vh;
   }
+  h4 {
+    cursor: pointer;
+  }
 
   form {
     width: 60%;
@@ -636,4 +639,13 @@ nav {
     }
   }
 
+}
+
+.profile {
+  width: fit-content;
+  padding: 1vh 2vh 1vh 2vh;
+  color: #394867;
+  font-weight: bold;
+  border-radius: 1vh;
+  font-size: 18px;
 }
