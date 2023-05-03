@@ -26,7 +26,7 @@ function SignUpModal (props){
         props.userCallback(new User(1,user,Useremail,Userpassword,UserGenre))
 
         console.log(user,Useremail,Userpassword,UserGenre)
-    
+        props.modalSignUpState(false)
     }
 
     return(

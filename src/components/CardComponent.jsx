@@ -20,7 +20,7 @@ function CardComponent(props) {
         <div>
         <p>{props.movieData.title}</p>
         <p>{props.movieData.year}</p>
-        <p><i class="fa-solid fa-star"></i>   {props.movieData.imDbRating ? props.movieData.imDbRating : "Not rated yet" }</p>
+        <p><i className="fa-solid fa-star"></i>   {props.movieData.imDbRating ? props.movieData.imDbRating : "Not rated yet" }</p>
         </div>
       </figcaption>
       </figure>

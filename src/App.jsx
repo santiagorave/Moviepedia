@@ -21,15 +21,15 @@ function App() {
   // fuction to pass to the son so it ill be executed
   const userHandler = function(userObject) {
     setUserLogged(userObject)
+
   }
 
-  console.log(userLogged)
 
   {/* sons */}
   return (
     <>
     {/* if modalLogin is true : <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} /> happens */}
-    <Nav modalLoginState={setModalLogin}/>
+    <Nav userState={userLogged} modalLoginState={setModalLogin}/>
     {modalLogin && <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
