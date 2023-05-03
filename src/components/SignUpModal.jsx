@@ -23,9 +23,9 @@ function SignUpModal (props){
         let UserGenre = genre.current.value;
         
         // gets the function (userHandler) and pass a new User
-        props.userCallback(new User(1,user,Useremail,Userpassword,UserGenre))
-
-        console.log(user,Useremail,Userpassword,UserGenre)
+        let newUser=new User(Useremail,user,Useremail,Userpassword,UserGenre);
+        props.userCallback(newUser)
+        props.changeUsers(allUsers=> [...allUsers,newUser])
         props.modalSignUpState(false)
     }
 

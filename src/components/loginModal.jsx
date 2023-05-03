@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 
 
 function LoginModal(props) {
-
-
-
-
-
-
+    const email = useRef(null);
+    const password = useRef(null);
     // const that will have this function to close the modal 
     const closeModal = function () {
         props.modalLoginState(false)
+    }
+    const loginHandler = function(e){
+        e.preventDefault();
+        props.authUsers.forEach(user=>{
+            if((user.email==email.current.value)&& (user.password==password.current.value)) {
+                props.modalLoginState(false);
+                props.userCallback(user)
+
+            }
+        })
     }
 
     return (
@@ -23,12 +29,12 @@ function LoginModal(props) {
 
                     <h4> Login </h4>
 
-                    <form action="POST">
-                        <input type="email" name="email" id="email" placeholder='your email' />
-                        <input type="password" name="password" id="password" placeholder='enter your password'/>
+                    <form action="GET">
+                        <input ref={email} type="email" name="email" id="email" placeholder='your email' />
+                        <input ref={password} type="password" name="password" id="password" placeholder='enter your password'/>
 
                         <article className='loginBtn'>
-                            <button type="submit">
+                            <button onClick={loginHandler}>
                                 Login
                             </button>
                         </article>

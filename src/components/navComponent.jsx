@@ -8,8 +8,6 @@ function Nav(props){
             props.modalLoginState(true);
         }
     }
-     console.log(props.userState.name)
-    console.log(props.userState.name? true:false)
     return(
     <nav>
         <h1> Logo </h1>

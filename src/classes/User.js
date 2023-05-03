@@ -22,7 +22,7 @@ class User {
 
     constructor (id,name,email,password,genre,playlists=[],liked=[],disliked=[],picture='') {
         
-        this.id = id;
+        this.id = email;
         this.name = name;
         this.email = email;
         this.password = password;
