@@ -10,93 +10,93 @@ class User {
      * @var {array} disliked
     */
 
-    #id;
-    #name;
-    #email;
-    #password;
-    #genre;
-    #playlists = [];
-    #liked = [];
-    #disliked = [];
-    #picture = null;
+    id;
+    name;
+    email;
+    password;
+    genre;
+    playlists = [];
+    liked = [];
+    disliked = [];
+    picture = null;
 
     constructor (id,name,email,password,genre,playlists=[],liked=[],disliked=[],picture='') {
         
-        this.#id = id;
-        this.#name = name;
-        this.#email = email;
-        this.#password = password;
-        this.#genre = genre;
-        this.#playlists = playlists;
-        this.#liked = liked;
-        this.#disliked = disliked;
-        this.#picture = picture;
+        this.id = email;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.genre = genre;
+        this.playlists = playlists;
+        this.liked = liked;
+        this.disliked = disliked;
+        this.picture = picture;
 
     }
 
     // methods 
     getId(){
-        return this.#id;
+        return this.id;
     }
 
     getName(){
-        return this.#name;
+        return this.name;
     }
 
     setName(name){
-        this.#name = name;
+        this.name = name;
     }
 
     getEmail(){
-        return this.#email;
+        return this.email;
     }
 
     setEmail(email){
-        this.#email = email;
+        this.email = email;
     }
 
     getPassword(){
-        return this.#password;
+        return this.password;
     }
 
     setPassword(password){
-        this.#password = password;
+        this.password = password;
     }
 
     getGenre(){
-        return this.#genre;
+        return this.genre;
     }
 
     setGenre(genre){
-        this.#genre = genre;
+        this.genre = genre;
     }
 
     getPlaylists(){
-        return this.#playlists;
+        return this.playlists;
     }
 
     setPlaylists(playlists){
-        this.#playlists = playlists;
+        this.playlists = playlists;
     }
 
     getLiked(){
-        return this.#liked;
+        return this.liked;
     }
 
     setLiked(liked){
-        this.#liked = liked;
+        this.liked = liked;
     }
 
     getDisliked(){
-        return this.#disliked;
+        return this.disliked;
     }
 
     setDisliked(disliked){
-        this.#disliked = disliked;
+        this.disliked = disliked;
     }
 
     getPicture(){
-        return this.#picture;
+        return this.picture;
     }
 
     // setPicture(picture){
