@@ -4,6 +4,7 @@ import { useState,useRef } from 'react'
 function LoginModal(props) {
     const email = useRef(null);
     const password = useRef(null);
+    const [notValid,setNotValid] = useState(false);
     // const that will have this function to close the modal 
     const closeModal = function () {
         props.modalLoginState(false)
@@ -14,7 +15,9 @@ function LoginModal(props) {
             if((user.email==email.current.value)&& (user.password==password.current.value)) {
                 props.modalLoginState(false);
                 props.userCallback(user)
-
+            }
+            else{
+                setNotValid(true);
             }
         })
     }
@@ -32,7 +35,7 @@ function LoginModal(props) {
                     <form action="GET">
                         <input ref={email} type="email" name="email" id="email" placeholder='your email' />
                         <input ref={password} type="password" name="password" id="password" placeholder='enter your password'/>
-
+                        <p className='error' hidden={!notValid}><i className="fa-solid fa-triangle-exclamation"></i>Your password or email is not correct</p>
                         <article className='loginBtn'>
                             <button onClick={loginHandler}>
                                 Login
