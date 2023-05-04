@@ -649,3 +649,65 @@ nav {
   border-radius: 1vh;
   font-size: 18px;
 }
+
+.ProfileNav{
+  display: flex;
+  justify-content: space-between;
+
+  h4{
+    padding-right: 2vh;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+}
+
+.ProfileFigure{
+  display: flex;
+  padding-left: 5vh;
+  padding-top: 5vh;
+  column-gap: 5vh;
+
+  img{
+    width: 30vh;
+    height: 30vh;
+  }
+
+  figcaption{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+  }
+
+  button{
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+}
+
+.newPlaylist,
+.userLiked,
+.profilePlaylists{
+  padding-top: 10vh;
+  padding-left: 5vh;
+}
+
+.newPlaylist{
+  button{
+    background-color: rgb(170, 170, 170, 0.1);
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 3vh;
+    width: 15vh;
+    height: 20vh;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: #fff;
+    color: #394867;
+    border: 1px solid #394867;
+
+  }
+}

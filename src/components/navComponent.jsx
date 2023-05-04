@@ -19,9 +19,9 @@ function Nav(props){
                     <i className="fa-solid fa-magnifying-glass"></i>            
                 </button>
             </section>
-        </form>
+        </form> 
         <aside >
-            <Link hidden={!props.userState.name}  to="/profile">
+            <Link hidden={!props.userState.name} state={{state:props.userState.name}} to="/profile"> 
                 <button className="profile">{props.userState.name} </button>    
             </Link> 
         </aside>

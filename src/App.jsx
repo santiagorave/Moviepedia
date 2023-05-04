@@ -16,6 +16,7 @@ function App() {
   // by default the methods are hidden: useState(false);
   const [modalLogin, setModalLogin] = useState(false);
   const [signUp, setModalsignUp] = useState(false);
+
   //by the fault the the variable is an object
   const [userLogged, setUserLogged] = useState({});
   const [users,setUsers]=useState([
