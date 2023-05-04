@@ -260,22 +260,12 @@ nav {
   border: 1px solid transparent;
   border-radius: 21px;
   height: 32vh;
-  &:hover #slide1{
-    // opacity: 0;
-    transition: 1.2s;
-    position: relative;
-    left: 220px;
-  }
-  &:hover figcaption{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    gap: 2vh;
-    padding-top: 2vh;
-  }
   &:hover #bgslide{
     opacity: 0.2;
     transition: 1s;
+  }
+  &:hover{
+    cursor: pointer;
   }
 }
 #slides{
@@ -346,9 +336,6 @@ nav {
     cursor:pointer;
   }
 }
-figcaption{
-  display: none;
-}
 
 .company{
   width: 70%;
@@ -359,7 +346,6 @@ figcaption{
 .company > a:nth-child(2){
   width: 5vh;
   height: 5vh;
-  
 }
 
   
