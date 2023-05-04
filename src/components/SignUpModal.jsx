@@ -5,9 +5,8 @@ import User from '/src/classes/User.js'
 function SignUpModal(props) {
     const [notValid, setNotValid] = useState({
         valid: false,
-     message: ""
+        message: ""
     });
-    const [errorMessage, setMessage] = useState("");
     const closeModal = function () {
         props.modalSignUpState(false)
     }
@@ -25,17 +24,17 @@ function SignUpModal(props) {
         let Useremail = email.current.value;
         let Userpassword = password.current.value;
         let UserGenre = genre.current.value;
-        let repeatedEmail = props.allUsers.find(user=>user.email==Useremail)
+        let repeatedEmail = props.allUsers.find(user => user.email == Useremail)
         // console.log(`Repeated Email ${repeatedEmail.id}`)
-        
-        if (!user || !Useremail || !Userpassword || !UserGenre) {
-            setNotValid({valid:true,message:"You need to complete all the fields"});
 
-        }else if(repeatedEmail) {
-            setNotValid({valid:true,message:"The entered email already exists"});
+        if (!user || !Useremail || !Userpassword || !UserGenre) {
+            setNotValid({ valid: true, message: "You need to complete all the fields" });
+
+        } else if (repeatedEmail) {
+            setNotValid({ valid: true, message: "The entered email already exists" });
 
         }
-        
+
         else {
             let newUser = new User(Useremail, user, Useremail, Userpassword, UserGenre);
             props.userCallback(newUser)
