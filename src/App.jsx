@@ -4,7 +4,6 @@ import GetData from './components/getTop250'
 import MainCarrousel from './components/Carrousel'
 function App() {
   // const [count, setCount] = useState(0)
-
   return (
     <>
     <Nav/>

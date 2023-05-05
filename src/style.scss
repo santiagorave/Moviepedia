@@ -278,14 +278,17 @@ nav {
   border: 1px solid transparent;
   border-radius: 15px;
 }
+// .slides{
+//   display: none;
+// }
 .slides{
-  display: none;
-}
-#slide1{
   display:flex;
   margin-top: 1vh;
   flex-direction: row;
   column-gap: 5vh;
+  &:hover{
+    transform:scale(1.5);
+  }
 
 }
 .liked{
@@ -346,6 +349,10 @@ nav {
 .company > a:nth-child(2){
   width: 5vh;
   height: 5vh;
+}
+
+.hide{
+  display: none;
 }
 
   
