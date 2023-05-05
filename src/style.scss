@@ -462,7 +462,7 @@ nav {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   z-index: 1000;
 
@@ -648,4 +648,12 @@ nav {
   font-weight: bold;
   border-radius: 1vh;
   font-size: 18px;
+}
+
+.error {
+  color: rgb(249, 3, 3);
+  font-weight: bold;
+}
+.warning {
+  color: #fbda23;
 }
