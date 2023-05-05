@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect,useNavigate} from 'react'
 import Nav from './components/navComponent'
 import GetData from './components/GetData'
 import LoginModal from './components/loginModal';
 import SignUpModal from './components/SignUpModal';
+import { useLocation } from "react-router-dom";
+
 import User from './classes/User';
 
 // father 
@@ -19,11 +21,24 @@ function App() {
 
   //by the fault the the variable is an object
   const [userLogged, setUserLogged] = useState({});
+      // console.log(`User Login In ${userLogged.name}`)
   const [users,setUsers]=useState([
     new User("test@gmail.com","santiagorave","test@gmail.com","test123","Drama"),
     new User("matos@gmail.com","matos","matos@gmail.com","test123","Drama")
     
   ]);
+  let {state} = useLocation();
+
+  useEffect(() => {
+    window.history.replaceState({}, document.title);
+    console.log(state?.state)
+    console.log('Use')
+    if(state){
+      setUserLogged(state.state);
+    }
+    
+  }, [])
+  
 
   // fuction to pass to the son so it ill be executed
   const userHandler = function(userObject) {
@@ -31,7 +46,10 @@ function App() {
 
   }
 
-   console.log(users)
+  console.log(users)
+
+
+ 
 
 
   {/* sons */}

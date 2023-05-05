@@ -5,15 +5,15 @@ function Profile(props){
 
     // useLocation is a method for link as useEffect
     let {state} = useLocation();
-    console.log(state)
+    console.log(state.state);
 
     return (
         <>
             <nav id="ProfileNav" className="ProfileNav">
-                <Link to='/'> 
+                <Link state={{state:state.state}} to='/' > 
                     <h4>Logo</h4> 
                 </Link>
-                <Link to='/'>
+                <Link  to='/'>
                     <h4>Sign out</h4>
                 </Link>
             </nav>
@@ -24,18 +24,18 @@ function Profile(props){
                 </button>
 
                 <figcaption>
-                    <small> Name </small>
-                    <h2> Leticia </h2>
-                    <small> Email </small>
-                    <h2>le@gmail.com</h2>
+                    <small> Username </small>
+                    <h2> {state.state.name} </h2>
+                    <small> Email</small>
+                    <h2>{state.state.email} </h2>
                     <small> Favorite Genre </small>
-                    <h2>Romance</h2>
+                    <h2>{state.state.genre}</h2>
                 </figcaption>
             </figure>
 
             <aside id="newPlaylist" className="newPlaylist">
                 <h2> Create a Playlist</h2>
-                <button onClick={<PlaylistModal/>} > + </button>
+                <button> + </button>
             </aside>
 
             <section id="userLiked" className="userLiked">

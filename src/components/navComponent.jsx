@@ -21,9 +21,9 @@ function Nav(props){
             </section>
         </form> 
         <aside >
-            <Link hidden={!props.userState.name} state={{state:props.userState.name}} to="/profile"> 
+            <Link hidden={!props.userState.name} state={{state:props.userState}}  to="/profile"> 
                 <button className="profile">{props.userState.name} </button>    
-            </Link> 
+            </Link>  
         </aside>
         <h4 onClick={LogInHandler}>{props.userState.name? 'Sign out': 'Login'}</h4>
     </nav>)
