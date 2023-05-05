@@ -296,8 +296,20 @@ nav {
   position: relative;
 
 }
-.liked > article{
+#avatar{
   background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg");
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+#pocajonta{
+  background-image: url("https://lumiere-a.akamaihd.net/v1/images/p_mulan_20529_83d3893a.jpeg?region=0%2C0%2C513%2C810");
   background-position: 50% 40%;
   background-repeat: no-repeat;
   background-size: cover;

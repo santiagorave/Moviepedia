@@ -18,6 +18,10 @@ function CarrouselSec(props){
     let leftHandler = function(){
         setSlide(0);
     }
+    let bgHandler = function(){
+        let bg = document.getElementById("bgslide")
+        
+    }
     function CarrouselFig(props){
     
         return(
