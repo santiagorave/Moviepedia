@@ -123,7 +123,7 @@ function Modal(props) {
                                     <span onClick={closeModal} className="close floatclass">&times;</span>
                                 </aside>
                                 <section>
-                                    <iframe src={`${fullDetails.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="400" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
+                                    <iframe src={`${fullDetails?.trailer?.linkEmbed}?autoplay=false&width=700`} width="700" height="400" allowFullScreen={true} mozallowfullscreen="true" webkitallowfullscreen="true" frameBorder="no" scrolling="no"></iframe>
                                     <div className="details">
                                         <small>
                                             {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
