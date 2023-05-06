@@ -33,6 +33,17 @@ nav {
     width: 60%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    article { 
+      position: absolute;
+      color: #212A3E;
+      top: 3vh;
+      height: 100%;
+      width: 60%;
+      background-color: #394867;
+    }
   }
 
   section {
@@ -656,4 +667,7 @@ nav {
 }
 .warning {
   color: #fbda23;
+}
+.searchBox {
+  color: white;
 }
