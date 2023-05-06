@@ -10794,18 +10794,6 @@
         "imDbRatingCount": "1381"
     },
     {
-        "id": "tt6791350",
-        "rank": "31",
-        "rankUpDown": "+8",
-        "title": "Guardians of the Galaxy Vol. 3",
-        "fullTitle": "Guardians of the Galaxy Vol. 3 (2023)",
-        "year": "2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "James Gunn (dir.), Chris Pratt, Zoe Saldana",
-        "imDbRating": "",
-        "imDbRatingCount": "0"
-    },
-    {
         "id": "tt9764362",
         "rank": "32",
         "rankUpDown": "-1",
@@ -11080,18 +11068,6 @@
         "crew": "Scott Mann (dir.), Grace Caroline Currey, Virginia Gardner",
         "imDbRating": "6.4",
         "imDbRatingCount": "77194"
-    },
-    {
-        "id": "tt1001520",
-        "rank": "55",
-        "rankUpDown": "+3",
-        "title": "Last Voyage of the Demeter",
-        "fullTitle": "Last Voyage of the Demeter (2023)",
-        "year": "2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BOTljMzRkNDItNjYxYS00ODA4LThiZjYtMjI0MTFjODlmMGJmXkEyXkFqcGdeQXVyNzU0NzQxNTE@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "André Øvredal (dir.), Corey Hawkins, Aisling Franciosi",
-        "imDbRating": "",
-        "imDbRatingCount": "0"
     },
     {
         "id": "tt15398776",
@@ -11896,17 +11872,6 @@
         "crew": "Fernando Meirelles (dir.), Alexandre Rodrigues, Leandro Firmino",
         "imDbRating": "8.6",
         "imDbRatingCount": "767806"
-    },
-    {
-        "id": "tt0816692",
-        "rank": "25",
-        "title": "Interstellar",
-        "fullTitle": "Interstellar (2014)",
-        "year": "2014",
-        "image": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "Christopher Nolan (dir.), Matthew McConaughey, Anne Hathaway",
-        "imDbRating": "8.6",
-        "imDbRatingCount": "1893134"
     },
     {
         "id": "tt0118799",

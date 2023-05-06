@@ -13,9 +13,7 @@ function Nav(props){
     }
     const getElements = function () {
         fetch("src/data/Alldata.json").then(data => data.json()).then(movies => setAllMovies(movies));
-      }
-
-      
+      }     
   useEffect(() => {
     getElements()
 
@@ -33,7 +31,7 @@ function Nav(props){
 //   console.log(allmovies.map(item => item.id))
 
 // console.log(allmovies.filter((movie) => movie.name?.toLowerCase().includes("incep")))
-    console.log(allmovies.filter(el=>el?.title.toLowerCase().includes("wick")).slice(0,3))
+    // console.log(allmovies.filter(el=>el?.title.toLowerCase().includes("wick")).slice(0,3))
     // console.log(allmovies.map(el=>el))
 
 
@@ -51,9 +49,9 @@ function Nav(props){
             </section>
             <article className="searchBox">
                 {searchWord==""? null :
-                   allmovies.filter(el=>el?.title.toLowerCase().includes(searchWord.toLowerCase())).slice(0,3).map(el => {
+                   allmovies.filter(el=>el?.title.toLowerCase().includes(searchWord.toLowerCase())).slice(0,5).map(el => {
                     return (
-                        <p key={el.id} >{el.title}</p>
+                        <p onClick={searchTitleHandler} key={el.id} >{el.title}</p>
                     )
                    }) 
                 }
