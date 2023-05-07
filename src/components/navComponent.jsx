@@ -48,9 +48,11 @@ function Nav(props) {
 
     // console.log(allmovies.filter((movie) => movie.name?.toLowerCase().includes("incep")))
     // console.log(allmovies.filter(el=>el?.title.toLowerCase().includes("wick")).slice(0,3))
-    // console.log(allmovies.map(el=>el))
-
-
+    // console.log()
+    // const  idSet = new Set();
+    // const hasDuplicate = allmovies.filter(element =>idSet.size === idSet.add(element.id).size);
+    // console.log(hasDuplicate);
+   
 
     return (
         <>

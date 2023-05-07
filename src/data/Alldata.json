@@ -1573,57 +1573,6 @@
         ]
     },
     {
-        "id": "tt5971474",
-        "title": "The Little Mermaid",
-        "fullTitle": "The Little Mermaid (2023)",
-        "year": "2023",
-        "releaseState": "May 26, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BYTUxYjczMWUtYzlkZC00NTcwLWE3ODQtN2I2YTIxOTU0ZTljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Adventure, Family, Fantasy",
-        "genreList": [
-            {
-                "key": "Adventure",
-                "value": "Adventure"
-            },
-            {
-                "key": "Family",
-                "value": "Family"
-            },
-            {
-                "key": "Fantasy",
-                "value": "Fantasy"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Halle Bailey, Jonah Hauer-King, Melissa McCarthy, Javier Bardem",
-        "starList": [
-            {
-                "id": null,
-                "name": "Halle Bailey"
-            },
-            {
-                "id": null,
-                "name": "Jonah Hauer-King"
-            },
-            {
-                "id": null,
-                "name": "Melissa McCarthy"
-            },
-            {
-                "id": null,
-                "name": "Javier Bardem"
-            }
-        ]
-    },
-    {
         "id": "tt11040844",
         "title": "The Machine",
         "fullTitle": "The Machine (2023)",
@@ -2172,57 +2121,6 @@
             {
                 "id": null,
                 "name": "Alfred Guy"
-            }
-        ]
-    },
-    {
-        "id": "tt3427252",
-        "title": "The Boogeyman",
-        "fullTitle": "The Boogeyman (2023)",
-        "year": "2023",
-        "releaseState": "Jun 02, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BNzNkYmE1NDYtMmI4Mi00YjU2LTkxZDEtMWI0ZDE4MTczZDRjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Horror, Mystery, Thriller",
-        "genreList": [
-            {
-                "key": "Horror",
-                "value": "Horror"
-            },
-            {
-                "key": "Mystery",
-                "value": "Mystery"
-            },
-            {
-                "key": "Thriller",
-                "value": "Thriller"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Sophie Thatcher, Chris Messina, David Dastmalchian, Vivien Lyra Blair",
-        "starList": [
-            {
-                "id": null,
-                "name": "Sophie Thatcher"
-            },
-            {
-                "id": null,
-                "name": "Chris Messina"
-            },
-            {
-                "id": null,
-                "name": "David Dastmalchian"
-            },
-            {
-                "id": null,
-                "name": "Vivien Lyra Blair"
             }
         ]
     },
@@ -3277,53 +3175,6 @@
         ]
     },
     {
-        "id": "tt1462764",
-        "title": "Indiana Jones and the Dial of Destiny",
-        "fullTitle": "Indiana Jones and the Dial of Destiny (2023)",
-        "year": "2023",
-        "releaseState": "Jun 30, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BYzM4MjQ0MzktNTMwNi00MDdjLTg3YTctY2M4OWRjNzA2N2E1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Action, Adventure",
-        "genreList": [
-            {
-                "key": "Action",
-                "value": "Action"
-            },
-            {
-                "key": "Adventure",
-                "value": "Adventure"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Harrison Ford, Mads Mikkelsen, Boyd Holbrook, Phoebe Waller-Bridge",
-        "starList": [
-            {
-                "id": null,
-                "name": "Harrison Ford"
-            },
-            {
-                "id": null,
-                "name": "Mads Mikkelsen"
-            },
-            {
-                "id": null,
-                "name": "Boyd Holbrook"
-            },
-            {
-                "id": null,
-                "name": "Phoebe Waller-Bridge"
-            }
-        ]
-    },
-    {
         "id": "tt27155038",
         "title": "Ruby Gillman, Teenage Kraken",
         "fullTitle": "Ruby Gillman, Teenage Kraken (2023)",
@@ -3512,57 +3363,6 @@
             {
                 "id": null,
                 "name": "Karen Watson"
-            }
-        ]
-    },
-    {
-        "id": "tt13405778",
-        "title": "Insidious: The Red Door",
-        "fullTitle": "Insidious: The Red Door (2023)",
-        "year": "2023",
-        "releaseState": "Jul 07, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BMjdlZjI4YTEtNjgzZi00NTA1LWIwZWYtMDc0MzhjOWNlYjcxXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.8108_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Horror, Mystery, Thriller",
-        "genreList": [
-            {
-                "key": "Horror",
-                "value": "Horror"
-            },
-            {
-                "key": "Mystery",
-                "value": "Mystery"
-            },
-            {
-                "key": "Thriller",
-                "value": "Thriller"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Ty Simpkins, Patrick Wilson, Rose Byrne, Hiam Abbass",
-        "starList": [
-            {
-                "id": null,
-                "name": "Ty Simpkins"
-            },
-            {
-                "id": null,
-                "name": "Patrick Wilson"
-            },
-            {
-                "id": null,
-                "name": "Rose Byrne"
-            },
-            {
-                "id": null,
-                "name": "Hiam Abbass"
             }
         ]
     },
@@ -3919,108 +3719,6 @@
             {
                 "id": null,
                 "name": "Alessia Zecchini"
-            }
-        ]
-    },
-    {
-        "id": "tt1517268",
-        "title": "Barbie",
-        "fullTitle": "Barbie (2023)",
-        "year": "2023",
-        "releaseState": "Jul 21, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BOWIwZGY0OTYtZjUzYy00NzRmLTg5YzgtYWMzNWQ0MmZiY2MwXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Adventure, Comedy, Fantasy",
-        "genreList": [
-            {
-                "key": "Adventure",
-                "value": "Adventure"
-            },
-            {
-                "key": "Comedy",
-                "value": "Comedy"
-            },
-            {
-                "key": "Fantasy",
-                "value": "Fantasy"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Margot Robbie, Ariana Greenblatt, Ryan Gosling, Helen Mirren",
-        "starList": [
-            {
-                "id": null,
-                "name": "Margot Robbie"
-            },
-            {
-                "id": null,
-                "name": "Ariana Greenblatt"
-            },
-            {
-                "id": null,
-                "name": "Ryan Gosling"
-            },
-            {
-                "id": null,
-                "name": "Helen Mirren"
-            }
-        ]
-    },
-    {
-        "id": "tt15398776",
-        "title": "Oppenheimer",
-        "fullTitle": "Oppenheimer (2023)",
-        "year": "2023",
-        "releaseState": "Jul 21, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BZWI2YWU2ODItYzBmNi00Yjc2LWJlMDQtMGJlMmUxM2M3NzMxXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Biography, Drama, History",
-        "genreList": [
-            {
-                "key": "Biography",
-                "value": "Biography"
-            },
-            {
-                "key": "Drama",
-                "value": "Drama"
-            },
-            {
-                "key": "History",
-                "value": "History"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Cillian Murphy, Emily Blunt, Matt Damon, Robert Downey Jr.",
-        "starList": [
-            {
-                "id": null,
-                "name": "Cillian Murphy"
-            },
-            {
-                "id": null,
-                "name": "Emily Blunt"
-            },
-            {
-                "id": null,
-                "name": "Matt Damon"
-            },
-            {
-                "id": null,
-                "name": "Robert Downey Jr."
             }
         ]
     },
@@ -6187,57 +5885,6 @@
         ]
     },
     {
-        "id": "tt5537002",
-        "title": "Killers of the Flower Moon",
-        "fullTitle": "Killers of the Flower Moon (2023)",
-        "year": "2023",
-        "releaseState": "Oct 20, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BZmMyMDc4NWMtZmUzNC00ZjczLWE1ZmYtYWQ3ZTk4ODBmYzE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio1.5135_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Crime, Drama, History",
-        "genreList": [
-            {
-                "key": "Crime",
-                "value": "Crime"
-            },
-            {
-                "key": "Drama",
-                "value": "Drama"
-            },
-            {
-                "key": "History",
-                "value": "History"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Leonardo DiCaprio, Robert De Niro, Lily Gladstone, Jesse Plemons",
-        "starList": [
-            {
-                "id": null,
-                "name": "Leonardo DiCaprio"
-            },
-            {
-                "id": null,
-                "name": "Robert De Niro"
-            },
-            {
-                "id": null,
-                "name": "Lily Gladstone"
-            },
-            {
-                "id": null,
-                "name": "Jesse Plemons"
-            }
-        ]
-    },
-    {
         "id": "tt13957560",
         "title": "Dumb Money",
         "fullTitle": "Dumb Money (2023)",
@@ -6809,57 +6456,6 @@
             {
                 "id": null,
                 "name": "Zendaya"
-            }
-        ]
-    },
-    {
-        "id": "tt10676048",
-        "title": "The Marvels",
-        "fullTitle": "The Marvels (2023)",
-        "year": "2023",
-        "releaseState": "Nov 10, 2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BYjI3ZDRkMmQtODFhMi00Mzc3LTk5ODYtNDcxZWQxYTJmMjU1XkEyXkFqcGdeQXVyMTA1NjE5MTAz._V1_Ratio0.6757_AL_.jpg",
-        "runtimeMins": null,
-        "runtimeStr": null,
-        "plot": null,
-        "contentRating": null,
-        "imDbRating": null,
-        "imDbRatingCount": null,
-        "metacriticRating": null,
-        "genres": "Action, Adventure, Fantasy",
-        "genreList": [
-            {
-                "key": "Action",
-                "value": "Action"
-            },
-            {
-                "key": "Adventure",
-                "value": "Adventure"
-            },
-            {
-                "key": "Fantasy",
-                "value": "Fantasy"
-            }
-        ],
-        "directors": null,
-        "directorList": [],
-        "stars": "Brie Larson, Samuel L. Jackson, Zawe Ashton, Iman Vellani",
-        "starList": [
-            {
-                "id": null,
-                "name": "Brie Larson"
-            },
-            {
-                "id": null,
-                "name": "Samuel L. Jackson"
-            },
-            {
-                "id": null,
-                "name": "Zawe Ashton"
-            },
-            {
-                "id": null,
-                "name": "Iman Vellani"
             }
         ]
     },
@@ -10013,7 +9609,7 @@
         "imDbRating": "6.1",
         "imDbRatingCount": "3905"
     },
-    {
+      {
         "id": "tt6486762",
         "rank": "66",
         "rankUpDown": "-27",
@@ -10480,18 +10076,6 @@
         "crew": "Dexter Fletcher (dir.), Chris Evans, Ana de Armas",
         "imDbRating": "5.8",
         "imDbRatingCount": "22507"
-    },
-    {
-        "id": "tt10366206",
-        "rank": "5",
-        "rankUpDown": "-3",
-        "title": "John Wick: Chapter 4",
-        "fullTitle": "John Wick: Chapter 4 (2023)",
-        "year": "2023",
-        "image": "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "Chad Stahelski (dir.), Keanu Reeves, Laurence Fishburne",
-        "imDbRating": "8.2",
-        "imDbRatingCount": "134396"
     },
     {
         "id": "tt13521006",
@@ -11178,18 +10762,6 @@
         "imDbRatingCount": "952"
     },
     {
-        "id": "tt0111161",
-        "rank": "66",
-        "rankUpDown": "+10",
-        "title": "The Shawshank Redemption",
-        "fullTitle": "The Shawshank Redemption (1994)",
-        "year": "1994",
-        "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "Frank Darabont (dir.), Tim Robbins, Morgan Freeman",
-        "imDbRating": "9.3",
-        "imDbRatingCount": "2732909"
-    },
-    {
         "id": "tt1877830",
         "rank": "67",
         "rankUpDown": "+3",
@@ -11200,18 +10772,6 @@
         "crew": "Matt Reeves (dir.), Robert Pattinson, Zoë Kravitz",
         "imDbRating": "7.8",
         "imDbRatingCount": "693945"
-    },
-    {
-        "id": "tt0068646",
-        "rank": "68",
-        "rankUpDown": "+1",
-        "title": "The Godfather",
-        "fullTitle": "The Godfather (1972)",
-        "year": "1972",
-        "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.7015_AL_.jpg",
-        "crew": "Francis Ford Coppola (dir.), Marlon Brando, Al Pacino",
-        "imDbRating": "9.2",
-        "imDbRatingCount": "1900266"
     },
     {
         "id": "tt0083907",
@@ -11428,18 +10988,6 @@
         "crew": "James Mangold (dir.), Harrison Ford, Mads Mikkelsen",
         "imDbRating": "",
         "imDbRatingCount": "0"
-    },
-    {
-        "id": "tt0110912",
-        "rank": "87",
-        "rankUpDown": "+18",
-        "title": "Pulp Fiction",
-        "fullTitle": "Pulp Fiction (1994)",
-        "year": "1994",
-        "image": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "Quentin Tarantino (dir.), John Travolta, Uma Thurman",
-        "imDbRating": "8.9",
-        "imDbRatingCount": "2100047"
     },
     {
         "id": "tt9185206",
@@ -12927,17 +12475,6 @@
         "crew": "Sam Mendes (dir.), Dean-Charles Chapman, George MacKay",
         "imDbRating": "8.2",
         "imDbRatingCount": "614915"
-    },
-    {
-        "id": "tt1745960",
-        "rank": "123",
-        "title": "Top Gun: Maverick",
-        "fullTitle": "Top Gun: Maverick (2022)",
-        "year": "2022",
-        "image": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6716_AL_.jpg",
-        "crew": "Joseph Kosinski (dir.), Tom Cruise, Jennifer Connelly",
-        "imDbRating": "8.2",
-        "imDbRatingCount": "572118"
     },
     {
         "id": "tt0363163",
