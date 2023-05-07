@@ -16,7 +16,7 @@ body {
 nav {
   border: 1px solid #394867;
   color: whitesmoke;
-  height: 10vh;
+  height: 9.5vh;
   display: flex;
   background-color: #394867;
   align-items: center;
@@ -24,9 +24,20 @@ nav {
   h1 {
     width: 20%;
     padding-left: 10vh;
+
   }
   h4 {
     cursor: pointer;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 7%;
+  transition: .2s;
+    &:hover {
+      background-color: #212A3E;
+    }
   }
 
   form {
@@ -675,6 +686,7 @@ nav {
   height: fit-content;
   z-index: 3;
   border-radius: 0.5vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   p {
     cursor: pointer;
     padding: 1vh;
@@ -685,4 +697,9 @@ nav {
 
     }
   }
+}
+
+input:focus {
+  outline: none !important;
+  border:1px solid #394867;
 }
