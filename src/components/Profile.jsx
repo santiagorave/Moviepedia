@@ -1,14 +1,39 @@
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PlaylistModal from "./PlaylistModal";
+import ProfilePicModal from "./ProfilePicModal";
 
 function Profile(props){
+    const [playlistModal,setPModal] = useState(false);
+    const [userPic,setUserPic] = useState(false);
+
+
+    function handleClick() {
+        setPModal(true)
+    }
+
+    function userPicModal (){
+        setUserPic(true)
+    }
+
+    function closeClick (status) {
+        setUserPic(status)
+    }
+
+    function clickClose(status) {
+        setPModal(status)
+    }
+
 
     // useLocation is a method for link as useEffect
     let {state} = useLocation();
     console.log(state.state);
 
+    
+    
     return (
         <>
+            {playlistModal && <PlaylistModal handler={clickClose}/>}
             <nav id="ProfileNav" className="ProfileNav">
                 <Link state={{state:state.state}} to='/' > 
                     <h4>Logo</h4> 
@@ -17,10 +42,11 @@ function Profile(props){
                     <h4>Sign out</h4>
                 </Link>
             </nav>
+            {userPic && <ProfilePicModal userPicture={state.state} handler={closeClick}/>}
 
             <figure id="ProfileFigure" className="ProfileFigure">
-                <button>
-                    <img src="/src/data/moviesnow.png" alt=""/>
+                <button onClick={userPicModal}>
+                    <img src={state.state.picture? state.state.picture : '/src/data/profile-default.png' } alt=""/>
                 </button>
 
                 <figcaption>
@@ -35,7 +61,7 @@ function Profile(props){
 
             <aside id="newPlaylist" className="newPlaylist">
                 <h2> Create a Playlist</h2>
-                <button> + </button>
+                <button onClick={handleClick}> + </button>
             </aside>
 
             <section id="userLiked" className="userLiked">
@@ -50,7 +76,8 @@ function Profile(props){
             </section>
         </>
     );
-
+    
+    
 }
 
 export default Profile;

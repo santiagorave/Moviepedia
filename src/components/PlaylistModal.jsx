@@ -1,20 +1,35 @@
-import { useRef } from "react";
+import { useState,useRef } from 'react'
 
 function PlaylistModal(props){
+
+    const playlistName = useRef(null);
+    const playlistImg = useRef(null);
+
+    const closeModal = function () {
+        props.handler(false)
+    }
+
     return(
         <article className="playlistCreate" id="playlistCreate">
 
-            <form action="POST">
-                <input type="image" src="" alt="playlistName" />
+        <section className='playlistCreateWrap' id='playlistCreateWrap'>
 
-                <input type="text" name="playlistName" id="playlistName"/>
+            <form>
+                <span onClick={closeModal} className="close">&times;</span>
 
-                <article>
-                    <button type="submit">
+                <aside>
+                    <input type="text" name="playlistName" id="playlistName"  ref={playlistName} placeholder=" name of the playlist"/>
+
+                    <button>
                         Create
                     </button>
-                </article>
+                </aside>
+
+
             </form>
+        </section>
+
+        
 
         </article>
     );
