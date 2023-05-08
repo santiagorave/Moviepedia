@@ -35,12 +35,12 @@ function Profile(props){
         <>
             {playlistModal && <PlaylistModal handler={clickClose}/>}
             <nav id="ProfileNav" className="ProfileNav">
-                <Link state={{state:state.state}} to='/' > 
+                <Link state={{state:state.state,users:state.users}} to='/' > 
                     <h4>Logo</h4> 
                 </Link>
-                <Link  to='/'>
+                {/* <Link  to='/'>
                     <h4>Sign out</h4>
-                </Link>
+                </Link> */}
             </nav>
             {userPic && <ProfilePicModal userPicture={state.state} handler={closeClick}/>}
 

@@ -31,10 +31,12 @@ function App() {
 
   useEffect(() => {
     window.history.replaceState({}, document.title);
-    console.log(state?.state)
-    console.log('Use')
+    // console.log(state?.state)
+
+    console.log(state)
     if(state){
       setUserLogged(state.state);
+      setUsers(state.users)
     }
     
   }, [])
@@ -56,7 +58,7 @@ function App() {
   return (
     <>
     {/* if modalLogin is true : <LoginModal modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} /> happens */}
-    <Nav userState={userLogged} userMethod={setUserLogged} modalLoginState={setModalLogin}/>
+    <Nav allUsers={users} userState={userLogged} userMethod={setUserLogged} modalLoginState={setModalLogin}/>
     {modalLogin && <LoginModal userCallback={userHandler} authUsers={users} modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}

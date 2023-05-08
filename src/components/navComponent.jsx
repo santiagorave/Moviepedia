@@ -21,7 +21,7 @@ function Nav(props){
             </section>
         </form> 
         <aside >
-            <Link hidden={!props.userState.name} state={{state:props.userState}}  to="/profile"> 
+            <Link hidden={!props.userState.name} state={{state:props.userState,users:props.allUsers}}  to="/profile"> 
                 <button className="profile">{props.userState.name} </button>    
             </Link>  
         </aside>
