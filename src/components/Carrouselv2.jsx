@@ -10,19 +10,16 @@ let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/image
 
 function Container(props){
     const [slide,setSlide]=useState(0);
-    const [bground, setBg]=useState("avatar");
     let rightHandler = function(){
-        setSlide(1);
-        setBg("pocajonta");
+        setSlide((slide + 1) % fakeData.length);
     }
     let leftHandler = function(){
-        setSlide(0);
-        setBg("avatar");
+        setSlide((slide - 1 + fakeData.length) % fakeData.length);
     }
     
     function BackGround(props){
         return(
-            <article hidden={props.id==bground?false:true} id={props.id}>
+            <article style={{ backgroundImage: `url(${fakeData[slide].src})` }} id={props.id}>
     
             </article>    
         );
