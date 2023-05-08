@@ -33,15 +33,14 @@ function Profile(props){
     
     return (
         <>
-            {playlistModal && <PlaylistModal handler={clickClose}/>}
             <nav id="ProfileNav" className="ProfileNav">
                 <Link state={{state:state.state,users:state.users}} to='/' > 
                     <h4>Logo</h4> 
                 </Link>
-                {/* <Link  to='/'>
-                    <h4>Sign out</h4>
-                </Link> */}
             </nav>
+
+            {playlistModal && <PlaylistModal handler={clickClose}/>}
+
             {userPic && <ProfilePicModal userPicture={state.state} handler={closeClick}/>}
 
             <figure id="ProfileFigure" className="ProfileFigure">
@@ -72,7 +71,6 @@ function Profile(props){
             </section>
 
             <section id="profilePlaylists" className="profilePlaylists">
-
             </section>
         </>
     );

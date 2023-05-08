@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import LoadingSpinner from "./Spinner";
+import AddPlaylist from "./AddPlaylistModal";
 function Modal(props) {
     const closeModal = function () {
         props.handler(false)
@@ -88,6 +89,8 @@ function Modal(props) {
 
     });
 
+    const [playlist, setAddPlaylist] = useState(false);
+
     useEffect(() => {
         const API_KEY = "k_5w96icwm";
         const API_KEY_PLATFORM = "d85kYSxRrSvSdKsv9deB4tPyy6NJ7Damby0TAmMA"
@@ -111,8 +114,15 @@ function Modal(props) {
             )
 
     }, [])
+
+    const addPlaylist = function() {
+        setAddPlaylist(true)
+    }
     return (
         <>
+
+            {playlist && <AddPlaylist handler={setAddPlaylist}/>}
+
             <div id="myModal" className="modal">
                 <div className="modal-content">
 
@@ -133,7 +143,7 @@ function Modal(props) {
                                         <div className="buttons">
                                             <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
                                             <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
-                                            <button><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+                                            <button onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 
                                         </div>
                                         <div className="platforms">
