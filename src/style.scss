@@ -288,28 +288,9 @@ nav {
   column-gap: 5vh;
   align-items: center;
   justify-content: center;
-  // &:hover{
-  //   transform:scale(1.5);
-  // }
-
-}
-.slides {
-  position: relative;
-  width: 100%;
-  height: 30vh;
-  overflow: hidden;
+  
 }
 
-
-.slides img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.slides:hover img {
-  transform: scale(1.5);
-}
 .liked{
   width: 90%;
   position: relative;

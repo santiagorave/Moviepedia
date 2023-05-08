@@ -7,15 +7,22 @@ let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/image
 
 
 
-
 function Container(props){
     const [slide,setSlide]=useState(0);
-    let rightHandler = function(){
-        setSlide((slide + 1) % fakeData.length);
+    let rightHandler = function() {
+    if (slide === fakeData.length - 1) {
+      setSlide(0);
+    } else {
+      setSlide(slide + 1);
     }
-    let leftHandler = function(){
-        setSlide((slide - 1 + fakeData.length) % fakeData.length);
+  };
+    let leftHandler = function() {
+    if (slide === 0) {
+      setSlide(fakeData.length - 1);
+    } else {
+      setSlide(slide - 1);
     }
+  };
     
     function BackGround(props){
         return(
