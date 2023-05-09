@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PlaylistModal from "./PlaylistModal";
 import ProfilePicModal from "./ProfilePicModal";
+import Playlist from "./PlaylistComponent";
 
 function Profile(props){
     const [playlistModal,setPModal] = useState(false);
@@ -71,6 +72,12 @@ function Profile(props){
             </section>
 
             <section id="profilePlaylists" className="profilePlaylists">
+                <h3>Playlists</h3>
+                {state.state.playlists.length!=0 ?state.state.playlists.map(playlist=> {
+                   return <Playlist key={playlist.playlistName} movieData={playlist.movies} listName={playlist.playlistName}/>
+                }): (
+                    <p>You dont have any playlist <i style={{color:'yellow'}} className="fa-solid fa-face-frown"></i> </p>
+                )}
             </section>
         </>
     );

@@ -21,10 +21,10 @@ function AddPlaylist (props){
         // });
         for(let i=0;i< state.state.playlists.length;i++) {
             if(state.state.playlists[i].playlistName==selectRef.current.value){
-                let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle);
+                let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
                 state.state.playlists[i].movies.push(movieSelected)
     console.log(state.state);
-                
+
             }
         }
         

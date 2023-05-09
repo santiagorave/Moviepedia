@@ -9,8 +9,11 @@ class Movie {
      * @var {string} trailerLink
     */
 
-    movieID;
-    movieName;
+    id;
+    title;
+    image;
+    year;
+    imDbRating;
     // #movieGenre;
     // #description;
     // #platform;
@@ -18,10 +21,13 @@ class Movie {
     // #trailerLink;
     // #poster = null;
 
-    constructor (movieID,movieName) {
+    constructor (id,title,image,year,imDbRating) {
 
-        this.movieID = movieID;
-        this.movieName = movieName;
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.year = year;
+        this.imDbRating = imDbRating;
         // this.#movieGenre = movieGenre;
         // this.#description = description;
         // this.#platform = platform;
@@ -38,6 +44,15 @@ class Movie {
 
     getMovieName(){
         return this.movieName;
+    }
+    getMovieImage(){
+        return this.movieImage;
+    }
+    getMovieYear(){
+        return this.movieYear;
+    }
+    getMovieRating(){
+        return this.movieRating;
     }
 
 

@@ -114,14 +114,13 @@ function Modal(props) {
             )
 
     }, [])
-
     const addPlaylist = function() {
         setAddPlaylist(true)
     }
     return (
         <>
 
-            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle}} handler={setAddPlaylist}/>}
+            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
 
             <div id="myModal" className="modal">
                 <div className="modal-content">
@@ -138,7 +137,7 @@ function Modal(props) {
                                         <small>
                                             {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
                                         </small>
-                                        <h2>{props.movieData.fullTitle}</h2>
+                                        <h2>{props.movieData.fullTitle || props.movieData.title }</h2>
                                         <p>{fullDetails.plot}</p>
                                         <div className="buttons">
                                             <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
