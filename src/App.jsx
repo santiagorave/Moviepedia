@@ -48,10 +48,8 @@ function App() {
 
   }
 
+
   console.log(users)
-
-
- 
 
 
   {/* sons */}
@@ -63,7 +61,7 @@ function App() {
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
     {/* give the function userHandler to the son */}
-    {signUp && <SignUpModal changeUsers={setUsers} userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
+    {signUp && <SignUpModal allUsers={users} changeUsers={setUsers} userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}
     <GetData user={userLogged} title={"Most Popular"} data={GET_POPULAR}/>
     <GetData user={userLogged} title={"Popular TV Shows"} data={GET_TV}/>

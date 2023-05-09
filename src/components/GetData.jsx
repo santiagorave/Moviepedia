@@ -6,7 +6,6 @@ function GetData(props) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [page,setPage] = useState([0,6]);
-
   const getElements = function () {
     fetch(props.data).then((data) => {
       return data.json()
@@ -30,6 +29,7 @@ function GetData(props) {
     getElements()
 
   }, [])
+
   return (
     <>
     <section className='movieContainer'>
