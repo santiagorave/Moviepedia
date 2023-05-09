@@ -1,30 +1,23 @@
 class Playlists {
     /** 
      * @var {number} playlistID
-     * @var {img} playlistCover
      * @var {array} movies
     */
 
-    #playlistID;
-    #playlistCover = null; // playlistCover = picturePlaylist
-    #movies = [];
+    playlistName;
+    movies = [];
 
-    constructor (playlistID,playlistCover,movies) {
-        this.#playlistID = playlistID;
-        this.#playlistCover = playlistCover;
-        this.#movies = movies;
+    constructor (playlistName,movies=[]) {
+        this.playlistName = playlistName;
+        this.movies = movies;
     }
 
     getPlaylistID(){
-        return this.#playlistID;
-    }
-
-    getPlaylistCover(){
-        return this.#playlistCover;
+        return this.playlistName;
     }
 
     getMovies(){
-        return this.#movies;
+        return this.movies;
     }
 
 }

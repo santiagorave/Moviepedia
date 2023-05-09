@@ -9,88 +9,56 @@ class Movie {
      * @var {string} trailerLink
     */
 
-    #movieID;
-    #movieName;
-    #movieGenre;
-    #description;
-    #platform;
-    #cast = [];
-    #trailerLink;
-    #poster = null;
+    id;
+    title;
+    image;
+    year;
+    imDbRating;
+    // #movieGenre;
+    // #description;
+    // #platform;
+    // #cast = [];
+    // #trailerLink;
+    // #poster = null;
 
-    constructor (movieID,movieName,movieGenre,description,platform,cast,trailerLink,poster) {
+    constructor (id,title,image,year,imDbRating) {
 
-        this.#movieID = movieID;
-        this.#movieName = movieName;
-        this.#movieGenre = movieGenre;
-        this.#description = description;
-        this.#platform = platform;
-        this.#cast = cast;
-        this.#trailerLink = trailerLink;
-        this.#poster = poster;
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.year = year;
+        this.imDbRating = imDbRating;
+        // this.#movieGenre = movieGenre;
+        // this.#description = description;
+        // this.#platform = platform;
+        // this.#cast = cast;
+        // this.#trailerLink = trailerLink;
+        // this.#poster = poster;
 
     }
 
     // methods
     getMovieID(){
-        return this.#movieID;
+        return this.movieID;
     }
 
     getMovieName(){
-        return this.#movieName;
+        return this.movieName;
+    }
+    getMovieImage(){
+        return this.movieImage;
+    }
+    getMovieYear(){
+        return this.movieYear;
+    }
+    getMovieRating(){
+        return this.movieRating;
     }
 
-    setMovieName(movieName){
-        this.#movieName = movieName;
-    }
 
-    getMovieGenre(){
-        return this.#movieGenre;
-    }
 
-    setMovieGenre(movieGenre){
-        this.#movieGenre = movieGenre;
-    }
 
-    getDescription(){
-        return this.#description;
-    }
 
-    setDescription(description){
-        this.#description = description;
-    }
-
-    getPlatform(){
-        return this.#platform;
-    }
-
-    setPlatform(platform){
-        this.#platform = platform;
-    }
-
-    getCast(){
-        return this.#cast;
-    }
-
-    setCast(cast){
-        this.#cast = cast;
-    }
-
-    getTrailer(){
-        return this.#trailerLink;
-    }
-
-    setTrailer(trailerLink){
-        this.#trailerLink = trailerLink;
-    }
-
-    getPoster(){
-        return this.#poster;
-    }
-
-    setPoster(poster){
-        this.#poster = poster;
-    }
 }
 
 export default Movie;
