@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import PlaylistModal from "./PlaylistModal";
 import ProfilePicModal from "./ProfilePicModal";
 import Playlist from "./PlaylistComponent";
+import Like from "./LikeComponent";
 
 function Profile(props){
     const [playlistModal,setPModal] = useState(false);
@@ -35,7 +36,7 @@ function Profile(props){
     return (
         <>
             <nav id="ProfileNav" className="ProfileNav">
-                <Link state={{state:state.state,users:state.users}} to='/' > 
+                <Link className="ProfileNav-Link"state={{state:state.state,users:state.users}} to='/' > 
                     <h4>Logo</h4> 
                 </Link>
             </nav>
@@ -65,10 +66,16 @@ function Profile(props){
             </aside>
 
             <section id="userLiked" className="userLiked">
-                <h2> You've liked so far</h2>
-                <article>
-
-                </article>
+                <section className='movieContainer'>
+                    <h2> You've liked so far</h2>
+                    <div className="playlist">
+                        {state.state.liked.length!=0 ?state.state.liked.map(like=> {
+                        return <Like key={like.id} movieData={like}/>
+                        }): (
+                            <p>You dont have likes yet<i style={{color:'yellow'}} className="fa-solid fa-face-frown"></i> </p>
+                        )}
+                    </div>
+                </section>
             </section>
 
             <section id="profilePlaylists" className="profilePlaylists">
