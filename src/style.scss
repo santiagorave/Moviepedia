@@ -6,7 +6,7 @@
   font-family: 'Quicksand', sans-serif;
 
 }
-{
+body{
   background-color: #212A3E;
   color: whitesmoke;
 
@@ -939,6 +939,7 @@ nav {
   height: 100vh;
   width: 100vw;
   z-index: 1000;
+}
 
   .AddPlaylistWrap {
     text-align: center;
@@ -995,7 +996,7 @@ nav {
           width: 15vh;
           height: 5vh;
           font-size: 20px;
-          fonght: 600;
+          font-weight: 600;
           cursor: pointer;
         }
         
@@ -1035,7 +1036,3 @@ nav {
   }
 }
 
-input:focus {
-  outline: none !important;
-  border:1px solid #394867;
-}
