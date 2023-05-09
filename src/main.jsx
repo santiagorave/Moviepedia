@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import NotFound from './components/NotFound.jsx'
+import Profile from './components/Profile.jsx'
 import './style.scss'
 import {
   createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -13,7 +14,7 @@ import {
     },
     {
       path: "/profile",
-      element: <div>Profile</div>
+      element: <Profile/>
     }
   ]);
   

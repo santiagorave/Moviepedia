@@ -87,6 +87,7 @@ function Nav(props) {
                 <h4 onClick={LogInHandler}>{props.userState.name ? 'Sign out' : 'Login'}</h4>
             </nav>
         </>)
+
 }
 
 export default Nav;

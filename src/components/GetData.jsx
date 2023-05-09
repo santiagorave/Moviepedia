@@ -39,7 +39,7 @@ function GetData(props) {
       {isLoading ? <LoadingSpinner/>: (
         <>
           {movies.slice(...page).map(movie => (
-            <CardComponent key={movie.id} movieData={movie}/>
+            <CardComponent user={props.user} key={movie.id} movieData={movie}/>
           ))}
         </>
 
