@@ -65,10 +65,10 @@ function App() {
     {/* give the function userHandler to the son */}
     {signUp && <SignUpModal changeUsers={setUsers} userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}
-    <GetData title={"Most Popular"} data={GET_POPULAR}/>
-    <GetData title={"Popular TV Shows"} data={GET_TV}/>
-    <GetData title={"Top 250 Movies of All Time"} data={GET_250_DATA}/>
-    <GetData title={"Coming Soon"} data={GET_SOON}/>
+    <GetData user={userLogged} title={"Most Popular"} data={GET_POPULAR}/>
+    <GetData user={userLogged} title={"Popular TV Shows"} data={GET_TV}/>
+    <GetData user={userLogged} title={"Top 250 Movies of All Time"} data={GET_250_DATA}/>
+    <GetData user={userLogged} title={"Coming Soon"} data={GET_SOON}/>
     </>
   )
 }
