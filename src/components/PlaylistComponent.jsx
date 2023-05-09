@@ -6,7 +6,7 @@ function Playlist (props){
     return (
         <>
         <section className='movieContainer'>
-    <h4>{props.listName}</h4>
+    <h3>{props.listName}</h3>
     <div className="playlist">
     {props.movieData.map(movie=> {
         //  return <p key={movie.id}>{movie.title}{movie.image}{movie.year}{movie.imDbRating}</p>

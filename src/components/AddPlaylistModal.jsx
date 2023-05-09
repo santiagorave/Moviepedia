@@ -5,6 +5,7 @@ import Movie from '../classes/Movie';
 
 function AddPlaylist (props){
     const selectRef = useRef(null);
+    const [errorMessage,setError] = useState(false);
     // close modal function
     const closeModal = function () {
         props.handler(false)
@@ -22,8 +23,16 @@ function AddPlaylist (props){
         for(let i=0;i< state.state.playlists.length;i++) {
             if(state.state.playlists[i].playlistName==selectRef.current.value){
                 let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
-                state.state.playlists[i].movies.push(movieSelected)
-    console.log(state.state);
+                if(state.state.playlists[i].movies.find(name =>name.title==props.movieData.fullTitle)){
+                    console.log("Esta pelicula ya existe");
+                    setError(true)
+                }else {
+                    state.state.playlists[i].movies.push(movieSelected)
+                    console.log("Añadida correctamente");
+                    props.handler(false)
+
+                }
+
 
             }
         }
@@ -54,6 +63,7 @@ function AddPlaylist (props){
                                 </option>
                             )}
                         </select>
+                        {errorMessage && <p style={{color:'yellow'}}> <i className="fa-solid fa-triangle-exclamation"></i>This movie is already in this playlist</p>}
                     
                         <button onClick={addMovie}>
                             Add
