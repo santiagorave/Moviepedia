@@ -19,11 +19,11 @@ function Nav(props){
                     <i className="fa-solid fa-magnifying-glass"></i>            
                 </button>
             </section>
-        </form>
+        </form> 
         <aside >
-            <Link hidden={!props.userState.name}  to="/profile">
+            <Link hidden={!props.userState.name} state={{state:props.userState,users:props.allUsers}}  to="/profile"> 
                 <button className="profile">{props.userState.name} </button>    
-            </Link> 
+            </Link>  
         </aside>
         <h4 onClick={LogInHandler}>{props.userState.name? 'Sign out': 'Login'}</h4>
     </nav>)

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import LoadingSpinner from "./Spinner";
+import AddPlaylist from "./AddPlaylistModal";
+import Movie from "../classes/Movie";
 function Modal(props) {
     const closeModal = function () {
         props.handler(false)
@@ -88,6 +90,8 @@ function Modal(props) {
 
     });
 
+    const [playlist, setAddPlaylist] = useState(false);
+
     useEffect(() => {
         const API_KEY = "k_5w96icwm";
         const API_KEY_PLATFORM = "d85kYSxRrSvSdKsv9deB4tPyy6NJ7Damby0TAmMA"
@@ -111,8 +115,19 @@ function Modal(props) {
             )
 
     }, [])
+    const addPlaylist = function() {
+        setAddPlaylist(true)
+    }
+    const likedFunction = function () {
+        let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
+        props.user.liked.push(movieSelected)
+        console.log(props.user);
+    }
     return (
         <>
+
+            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
+
             <div id="myModal" className="modal">
                 <div className="modal-content">
 
@@ -128,12 +143,12 @@ function Modal(props) {
                                         <small>
                                             {fullDetails.genreList?.slice(0, 1).map(genre => <span key={genre.value}>{genre.value}</span>)}
                                         </small>
-                                        <h2>{props.movieData.fullTitle}</h2>
+                                        <h2>{props.movieData.fullTitle || props.movieData.title }</h2>
                                         <p>{fullDetails.plot}</p>
                                         <div className="buttons">
-                                            <button><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                            <button onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
                                             <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
-                                            <button><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+                                            <button onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 
                                         </div>
                                         <div className="platforms">
