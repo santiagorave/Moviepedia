@@ -121,7 +121,7 @@ function Modal(props) {
     return (
         <>
 
-            {playlist && <AddPlaylist handler={setAddPlaylist}/>}
+            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle}} handler={setAddPlaylist}/>}
 
             <div id="myModal" className="modal">
                 <div className="modal-content">
