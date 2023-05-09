@@ -7,6 +7,7 @@ function PlaylistModal(props){
 
     // references by default are null
     const playlistName = useRef(null);
+    const [show,toggleMessage] = useState(false);
 
     // close modal function
     const closeModal = function () {
@@ -22,10 +23,16 @@ function PlaylistModal(props){
         e.preventDefault();
         let pName = playlistName.current.value;
         // put the current value as a PlaylistName (Classes)
-        let PlayList = new Playlists(pName)
-        state.state.playlists.push(PlayList);
-        console.log(pName);
-        props.handler(false);
+        if(state.state.playlists.find(playlist=> playlist.playlistName.toLowerCase()== pName.toLowerCase() )){
+            console.log("Ya hay una")
+            toggleMessage(true);
+        } else {
+            let PlayList = new Playlists(pName)
+            state.state.playlists.push(PlayList);
+            console.log(pName);
+            props.handler(false);
+        }
+
 
     }
 
@@ -42,7 +49,7 @@ function PlaylistModal(props){
                         <h4>Playlist Creation</h4>
 
                         <input type="text" name="playlistName" id="playlistName"  ref={playlistName} placeholder=" name of the playlist"/>
-
+                        {show && <p style={{color:'yellow'}}> <i className="fa-solid fa-triangle-exclamation"></i> This playlist name already exists</p>}
                         <button onClick={InputHandler}>
                             Create
                         </button>
