@@ -38,7 +38,6 @@ function Nav(props) {
     }
     const searchTitleHandler = function (e) {
         // data.current = { "id": e.target.id, "fullTitle": e.target.attributes.name.value }
-        debugger;
         let rating = e.target.attributes?.rating?.value ? e.target.attributes.rating.value : 'Not rated yet';
         data.current = new Movie(e.target.id,e.target.attributes.name.value,e.target.attributes.image.value,e.target.attributes.year.value,rating)
         console.log(data.current)
@@ -47,6 +46,7 @@ function Nav(props) {
         setModalSearch(true)
 
     }
+
 
     //   console.log(allmovies.map(item => item.id))
 

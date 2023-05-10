@@ -48,7 +48,7 @@ function AddPlaylist (props){
                     <span onClick={closeModal} className="close">&times;</span>
 
                     {/* consition if state.state.playlists is not an empty array ... else "You do not have any playlist. Go to your profile and create one" */}
-                    {  state!=null ? <aside>
+                    {  state!=null && state.state.playlists.length!=0  ? <aside>
                         <h4>Choose a playlist to add this movie</h4>
 
                         <select ref={selectRef} name="playlistsAdd" id="playlistsAdd">
