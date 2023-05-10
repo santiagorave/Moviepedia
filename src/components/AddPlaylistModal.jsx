@@ -10,9 +10,8 @@ function AddPlaylist (props){
     const closeModal = function () {
         props.handler(false)
     }
-    debugger;
     const addMovie = function(e) { 
-        e.preventDefault()
+        e.preventDefault();
         console.log(selectRef.current.value);
         for(let i=0;i< state.state.playlists.length;i++) {
             if(state.state.playlists[i].playlistName==selectRef.current.value){

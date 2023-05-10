@@ -119,11 +119,15 @@ function Modal(props) {
         setAddPlaylist(true)
     }
     const likedFunction = function () {
-        debugger;
-        // let movieName= props.movieData.fullTitle || props.movieData.title;
         let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.imDbRating);
-        props.user.liked.push(movieSelected)
-        console.log(props.user);
+        if(props.user.liked==undefined) {
+            alert("You need to log in")
+        }else {
+            props.user.liked.push(movieSelected)
+            props.handler(false)
+            console.log(props.user);
+        }
+   
     }
     return (
         <>
@@ -148,7 +152,7 @@ function Modal(props) {
                                         <h2>{props.movieData.fullTitle || props.movieData.title }</h2>
                                         <p>{fullDetails.plot}</p>
                                         <div className="buttons">
-                                            <button onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                            <button className={props?.user?.liked?.find(movie=>movie.id==props.movieData.id)? 'active':''} onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
                                             <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
                                             <button onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 

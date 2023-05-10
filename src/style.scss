@@ -338,6 +338,19 @@ nav {
     .buttons {
       display: flex;
 
+      .active {
+        background-color: green;
+        color: whitesmoke;
+
+        i {
+          color: whitesmoke;
+
+        }
+        &:hover .fa-thumbs-up {
+          color: whitesmoke;
+        }
+      }
+
       button {
         &:nth-child(1) {
           border-top-left-radius: 5px;
@@ -1047,4 +1060,6 @@ nav {
     }
   }
 }
+
+
 
