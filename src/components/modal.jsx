@@ -119,14 +119,16 @@ function Modal(props) {
         setAddPlaylist(true)
     }
     const likedFunction = function () {
-        let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
+        debugger;
+        // let movieName= props.movieData.fullTitle || props.movieData.title;
+        let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.imDbRating);
         props.user.liked.push(movieSelected)
         console.log(props.user);
     }
     return (
         <>
 
-            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
+            {playlist && <AddPlaylist movieData={{id:props.movieData.id,title:props.movieData.fullTitle || props.movieData.title,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
 
             <div id="myModal" className="modal">
                 <div className="modal-content">

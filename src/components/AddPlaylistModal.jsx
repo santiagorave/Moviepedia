@@ -22,8 +22,11 @@ function AddPlaylist (props){
         // });
         for(let i=0;i< state.state.playlists.length;i++) {
             if(state.state.playlists[i].playlistName==selectRef.current.value){
-                let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
-                if(state.state.playlists[i].movies.find(name =>name.title==props.movieData.fullTitle)){
+                debugger;
+                // let movieName= props.movieData.fullTitle || props.movieData.title;
+
+                let movieSelected = new Movie(props.movieData.id,props.movieData.title,props.movieData.image,props.movieData.year,props.movieData.rating);
+                if(state.state.playlists[i].movies.find(name =>name.title==props.movieData.title)){
                     console.log("Esta pelicula ya existe");
                     setError(true)
                 }else {
