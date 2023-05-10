@@ -10,19 +10,12 @@ function AddPlaylist (props){
     const closeModal = function () {
         props.handler(false)
     }
+    debugger;
     const addMovie = function(e) { 
         e.preventDefault()
         console.log(selectRef.current.value);
-        // state.state.playlists.forEach(element => {
-        //     if(element.playlistName==selectRef.current.value){
-        // // debugger;
-        //         let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle);
-        //         state.state.playlist.movies.push(movieSelected)
-        //     }
-        // });
         for(let i=0;i< state.state.playlists.length;i++) {
             if(state.state.playlists[i].playlistName==selectRef.current.value){
-                debugger;
                 // let movieName= props.movieData.fullTitle || props.movieData.title;
 
                 let movieSelected = new Movie(props.movieData.id,props.movieData.title,props.movieData.image,props.movieData.year,props.movieData.rating);
@@ -55,7 +48,7 @@ function AddPlaylist (props){
                     <span onClick={closeModal} className="close">&times;</span>
 
                     {/* consition if state.state.playlists is not an empty array ... else "You do not have any playlist. Go to your profile and create one" */}
-                    { state.state.playlists.length!=0 ? <aside>
+                    {  state!=null ? <aside>
                         <h4>Choose a playlist to add this movie</h4>
 
                         <select ref={selectRef} name="playlistsAdd" id="playlistsAdd">
