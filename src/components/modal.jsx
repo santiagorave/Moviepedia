@@ -85,7 +85,8 @@ function Modal(props) {
         "Sun Nxt": "/src/data/Sun_tv_logo.svg",
         "SundanceNow Doc Club": "/src/data/sundance-now5129.jpg",
         "Virgin TV GO": "/src/data/VirginTVGo.webp",
-        "Zee5": "/src/data/Zee5-official-logo.jpeg"
+        "Zee5": "/src/data/Zee5-official-logo.jpeg",
+        "FX": "/src/data/fx-canada2539.jpg"
 
 
     });
