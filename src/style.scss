@@ -1061,5 +1061,49 @@ nav {
   }
 }
 
+.liked-userNotLogged{
+  text-align: center;
+  background-color: rgb(57, 72, 103,0.8);
+  position: absolute;
+  width: 30%;
+  height: 40%;
+  border-radius: 8px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  
+
+  .liked-userNotLoggedWrap{
+    text-align: center;
+    background-color: rgb(57, 72, 103,0.8);
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    border-radius: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 100%;
+
+      aside{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vh;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+  }
+}
+
 
 
