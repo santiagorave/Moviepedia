@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import Modal from "./modal";
+import Movie from "../classes/Movie";
 function Nav(props) {
     const [allmovies, setAllMovies] = useState([]);
     const [searchWord, setWord] = useState("");
-    const [searchModal,setModalSearch] = useState(false);
+    const [searchModal, setModalSearch] = useState(false);
     const data = useRef({});
     const inputRef = useRef(null);
 
@@ -34,15 +35,18 @@ function Nav(props) {
     }
     const clickHandlerChild = function (data) {
         setModalSearch(data);
-      }
+    }
     const searchTitleHandler = function (e) {
-        data.current= {"id":e.target.id,"fullTitle":e.target.attributes.name.value}
+        // data.current = { "id": e.target.id, "fullTitle": e.target.attributes.name.value }
+        let rating = e.target.attributes?.rating?.value ? e.target.attributes.rating.value : 'Not rated yet';
+        data.current = new Movie(e.target.id,e.target.attributes.name.value,e.target.attributes.image.value,e.target.attributes.year.value,rating)
         console.log(data.current)
         setWord("");
-        inputRef.current.value="";
+        inputRef.current.value = "";
         setModalSearch(true)
 
     }
+
 
     //   console.log(allmovies.map(item => item.id))
 
@@ -52,13 +56,13 @@ function Nav(props) {
     // const  idSet = new Set();
     // const hasDuplicate = allmovies.filter(element =>idSet.size === idSet.add(element.id).size);
     // console.log(hasDuplicate);
-   
+
 
     return (
         <>
-        {searchModal && <Modal handler={clickHandlerChild}  movieData={data.current}/>}
+            {searchModal && <Modal user={props.userState} handler={clickHandlerChild} movieData={data.current} />}
             <nav>
-                <h1> Logo </h1>
+                <img src="/src/data/LogoMP.png" alt="mainlogo-pic"/>
 
                 <form action="#">
                     <section>
@@ -71,7 +75,7 @@ function Nav(props) {
                         {searchWord == "" ? null :
                             allmovies.filter(el => el?.title.toLowerCase().includes(searchWord.toLowerCase())).slice(0, 5).map(el => {
                                 return (
-                                    <p name={el.fullTitle} id={el.id} onClick={(data)=>{
+                                    <p name={el.fullTitle} image={el.image} rating={el.imDbRating} id={el.id} year={el.year} onClick={(data) => {
                                         searchTitleHandler(data)
                                     }} key={el.id} >{el.title}</p>
                                 )
@@ -80,7 +84,7 @@ function Nav(props) {
                     </article>
                 </form>
                 <aside >
-                    <Link hidden={!props.userState.name} to="/profile">
+                    <Link hidden={!props.userState.name} state={{ state: props.userState, users: props.allUsers }} to="/profile">
                         <button className="profile">{props.userState.name} </button>
                     </Link>
                 </aside>

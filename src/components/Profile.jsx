@@ -37,7 +37,7 @@ function Profile(props){
         <>
             <nav id="ProfileNav" className="ProfileNav">
                 <Link className="ProfileNav-Link"state={{state:state.state,users:state.users}} to='/' > 
-                    <h4>Logo</h4> 
+                    <img src="/src/data/LogoMP.png" alt="mainlogo-02"/>
                 </Link>
             </nav>
 
@@ -79,12 +79,15 @@ function Profile(props){
             </section>
 
             <section id="profilePlaylists" className="profilePlaylists">
-                <h2>Playlists</h2>
-                {state.state.playlists.length!=0 ?state.state.playlists.map(playlist=> {
-                   return <Playlist key={playlist.playlistName} movieData={playlist.movies} listName={playlist.playlistName}/>
-                }): (
-                    <p>You dont have any playlist <i style={{color:'yellow'}} className="fa-solid fa-face-frown"></i> </p>
-                )}
+                <section id="PlaylistsWrap" className="PlaylistsWrap">
+
+                    <h2>Playlists</h2>
+                    {state.state.playlists.length!=0 ?state.state.playlists.map(playlist=> {
+                    return <Playlist key={playlist.playlistName} movieData={playlist.movies} listName={playlist.playlistName}/>
+                    }): (
+                        <p>You dont have any playlist <i style={{color:'yellow'}} className="fa-solid fa-face-frown"></i> </p>
+                    )}
+                </section>
             </section>
         </>
     );

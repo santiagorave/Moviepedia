@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import LoadingSpinner from "./Spinner";
 import AddPlaylist from "./AddPlaylistModal";
+import LikedNotLogged from "./LikedNotLogged";
 import Movie from "../classes/Movie";
 function Modal(props) {
     const closeModal = function () {
@@ -85,11 +86,12 @@ function Modal(props) {
         "Sun Nxt": "/src/data/Sun_tv_logo.svg",
         "SundanceNow Doc Club": "/src/data/sundance-now5129.jpg",
         "Virgin TV GO": "/src/data/VirginTVGo.webp",
-        "Zee5": "/src/data/Zee5-official-logo.jpeg"
+        "Zee5": "/src/data/Zee5-official-logo.jpeg",
+        "FX": "/src/data/fx-canada2539.jpg"
 
 
     });
-
+    const [likedNotLogged, setLiked] = useState(false);
     const [playlist, setAddPlaylist] = useState(false);
 
     useEffect(() => {
@@ -119,14 +121,32 @@ function Modal(props) {
         setAddPlaylist(true)
     }
     const likedFunction = function () {
-        let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.rating);
-        props.user.liked.push(movieSelected)
-        console.log(props.user);
+        let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.imDbRating);
+        if(props.user.liked==undefined) {
+            setLiked(true);
+            // alert("you need to be logged");
+        }else {
+            console.log(props.user);
+            console.log(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id));
+
+            if(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id)>-1) {
+                console.log("Ya está");
+                props.user.liked.splice(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id),1);
+                props.handler(false)
+            }else {
+                props.user.liked.push(movieSelected)
+                props.handler(false)
+                console.log(props.user);
+            }
+            
+
+        }
+   
     }
     return (
         <>
-
-            {playlist && <AddPlaylist movieData={{id:props.movieData.id,fullTitle:props.movieData.fullTitle,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
+             {likedNotLogged && <LikedNotLogged handler={setLiked}/>}
+            {playlist && <AddPlaylist movieData={{id:props.movieData.id,title:props.movieData.fullTitle || props.movieData.title,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
 
             <div id="myModal" className="modal">
                 <div className="modal-content">
@@ -145,10 +165,9 @@ function Modal(props) {
                                         </small>
                                         <h2>{props.movieData.fullTitle || props.movieData.title }</h2>
                                         <p>{fullDetails.plot}</p>
-                                        <div className="buttons">
-                                            <button onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
-                                            <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
-                                            <button onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+                                        <div className="buttons" style={props.profile ? {display:"none"}: {display:"flex"} }>
+                                            <button  className={props?.user?.liked?.find(movie=>movie.id==props.movieData.id)? 'active':''} onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                            <button  onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 
                                         </div>
                                         <div className="platforms">

@@ -5,7 +5,7 @@ function Like (props){
         <>
         
      
-         <CardComponent key={props.movieData.id} movieData={props.movieData}/>
+         <CardComponent profile={true} key={props.movieData.id} movieData={props.movieData}/>
     
       
     
