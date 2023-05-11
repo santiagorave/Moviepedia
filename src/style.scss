@@ -6,7 +6,7 @@
   font-family: 'Quicksand', sans-serif;
 
 }
-{
+body{
   background-color: #212A3E;
   color: whitesmoke;
 
@@ -995,7 +995,7 @@ nav {
           width: 15vh;
           height: 5vh;
           font-size: 20px;
-          fonght: 600;
+          font-weight: 600;
           cursor: pointer;
         }
         
@@ -1008,6 +1008,7 @@ nav {
       }
     }
   }
+}
 .error {
   color: rgb(249, 3, 3);
   font-weight: bold;
@@ -1091,7 +1092,7 @@ nav {
   justify-content: center;
 }
 .slides > img{
-  width: 20vh;
+  width: 23vh;
   height: 30vh;
   border: 1px solid transparent;
   border-radius: 15px;
@@ -1172,6 +1173,8 @@ nav {
 .hide{
   display: none;
 }
+.MainC{
+  padding-top: 5vh;
+}
 
-  
 
