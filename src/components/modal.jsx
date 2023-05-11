@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import LoadingSpinner from "./Spinner";
 import AddPlaylist from "./AddPlaylistModal";
+import LikedNotLogged from "./LikedNotLogged";
 import Movie from "../classes/Movie";
 function Modal(props) {
     const closeModal = function () {
@@ -90,7 +91,7 @@ function Modal(props) {
 
 
     });
-
+    const [likedNotLogged, setLiked] = useState(false);
     const [playlist, setAddPlaylist] = useState(false);
 
     useEffect(() => {
@@ -122,7 +123,8 @@ function Modal(props) {
     const likedFunction = function () {
         let movieSelected = new Movie(props.movieData.id,props.movieData.fullTitle,props.movieData.image,props.movieData.year,props.movieData.imDbRating);
         if(props.user.liked==undefined) {
-            alert("You need to log in")
+            setLiked(true);
+            // alert("you need to be logged");
         }else {
             console.log(props.user);
             console.log(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id));
@@ -143,7 +145,7 @@ function Modal(props) {
     }
     return (
         <>
-
+             {likedNotLogged && <LikedNotLogged handler={setLiked}/>}
             {playlist && <AddPlaylist movieData={{id:props.movieData.id,title:props.movieData.fullTitle || props.movieData.title,image:props.movieData.image,year:props.movieData.year,rating:props.movieData.imDbRating}} handler={setAddPlaylist}/>}
 
             <div id="myModal" className="modal">
