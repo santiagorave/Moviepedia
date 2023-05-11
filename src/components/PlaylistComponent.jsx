@@ -10,7 +10,7 @@ function Playlist (props){
     <div className="playlist">
     {props.movieData.map(movie=> {
         //  return <p key={movie.id}>{movie.title}{movie.image}{movie.year}{movie.imDbRating}</p>
-        return <CardComponent key={movie.id} movieData={movie}/>
+        return <CardComponent profile={true} key={movie.id} movieData={movie}/>
     })}
     </div>
     </section>
