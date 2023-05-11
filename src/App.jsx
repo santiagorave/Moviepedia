@@ -60,7 +60,7 @@ function App() {
     {modalLogin && <LoginModal userCallback={userHandler} authUsers={users} modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
-    <MainCarrousel/>
+    <MainCarrousel data={GET_TV}/>
     {/* give the function userHandler to the son */}
     {signUp && <SignUpModal allUsers={users} changeUsers={setUsers} userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}

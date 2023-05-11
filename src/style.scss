@@ -1149,13 +1149,14 @@ nav {
 
 }
 .liked > article{
-  background-position: 50% 40%;
+  background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.1;
+  // filter: blur(2px);
   border: 1px solid transparent;
   border-radius: 20px;
 }
@@ -1205,6 +1206,10 @@ nav {
 
 .hide{
   display: none;
+}
+
+.MainC{
+  padding-top: 4vh;
 }
 
   

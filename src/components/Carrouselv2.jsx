@@ -1,4 +1,6 @@
+import Movie from "../classes/Movie";
 import { useState } from "react";
+import Popular from "../data/Popular-TV.json"
 //fake data for carrousel test
 let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg"},
 {id:1,name:"pocajonta",src:"https://lumiere-a.akamaihd.net/v1/images/p_mulan_20529_83d3893a.jpeg?region=0%2C0%2C513%2C810"},
@@ -6,45 +8,46 @@ let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/image
 
 
 
-
-function Container(props){
-    const [slide,setSlide]=useState(0);
+function Container(){
+    const [slide,setSlide]=useState(1);
     let rightHandler = function() {
-    if (slide === fakeData.length - 1) {
+    if (slide === Popular.items.length - 1) {
       setSlide(0);
     } else {
       setSlide(slide + 1);
     }
   };
     let leftHandler = function() {
-    if (slide === 0) {
-      setSlide(fakeData.length - 1);
+    if (slide === 1) {
+      setSlide(Popular.items.length - 1);
     } else {
       setSlide(slide - 1);
     }
   };
+//   console.log(JSON.stringify(Popular.items[0].image));
     
     function BackGround(props){
         return(
-            <article style={{ backgroundImage: `url(${fakeData[slide].src})` }} id={props.id}>
+            <article style={{ backgroundImage: `url(${Popular.items[slide].image})` }} id={props.id}>
     
             </article>    
         );
     }
     function Slides(props){
+        const imgId = parseInt(props.id)
         return(
             <figure className="slides" id={props.id}>
-                <img hidden={props.id==slide?false:true} src={props.src} alt={props.alt}/>
+                <img hidden={imgId==slide?false:true} src={Popular.items[slide].image} alt={props.alt}/>
             </figure>
         );   
     }
     return(
         <section className="liked">
             {
-                fakeData.map(
+                Popular.items.map(
                     (bg)=>(
                         <BackGround
-                        id={bg.name}
+                        id={bg.title}
                         />
                     )
                 )
@@ -52,11 +55,11 @@ function Container(props){
             <section>
                 <div id="slides">
                     {
-                        fakeData.map(
-                            (data)=>(
+                        Popular.items.map(
+                            (data) =>(
                                 <Slides
-                                id={data.id}
-                                src={data.src}
+                                id={data.rank}
+                                src={data.image}
                                 alt={data.id}
                                 />
                             )
