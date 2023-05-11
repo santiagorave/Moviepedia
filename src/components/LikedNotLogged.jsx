@@ -5,16 +5,16 @@ function LikedNotLogged(props){
     }
 
     return(
-        <article className="liked-userNotLogged" id="liked-userNotLogged">
+        <article className="TryLike" id="TryLike">
 
-            <section className='liked-userNotLoggedWrap' id='liked-userNotLoggedWrap'>
+            <section className='TryLikeWrap' id='TryLikeWrap'>
 
                 <form>
                     <span onClick={closeLikedModal} className="close">&times;</span>
 
                     <aside>
                         <h4>
-                            You need to login to like a movie
+                            You need to be logged
                         </h4>
                     </aside>
 
@@ -22,6 +22,7 @@ function LikedNotLogged(props){
             </section>
 
         </article>
+
     );
 }
 
