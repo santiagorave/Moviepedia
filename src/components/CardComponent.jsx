@@ -13,7 +13,7 @@ function CardComponent(props) {
   }
   return (
     <>
-      {modal && <Modal user={props.user} handler={clickHandlerChild} movieData={props.movieData} />}
+      {modal && <Modal profile={props.profile} user={props.user} handler={clickHandlerChild} movieData={props.movieData} />}
       <figure onClick={clickHandler} className="hover-poster">
       <img className='poster'  src={props.movieData.image} />
       <figcaption>

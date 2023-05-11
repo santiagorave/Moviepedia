@@ -124,9 +124,20 @@ function Modal(props) {
         if(props.user.liked==undefined) {
             alert("You need to log in")
         }else {
-            props.user.liked.push(movieSelected)
-            props.handler(false)
             console.log(props.user);
+            console.log(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id));
+
+            if(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id)>-1) {
+                console.log("Ya está");
+                props.user.liked.splice(props.user.liked.findIndex(likedMovie=> likedMovie.id==movieSelected.id),1);
+                props.handler(false)
+            }else {
+                props.user.liked.push(movieSelected)
+                props.handler(false)
+                console.log(props.user);
+            }
+            
+
         }
    
     }
@@ -152,10 +163,9 @@ function Modal(props) {
                                         </small>
                                         <h2>{props.movieData.fullTitle || props.movieData.title }</h2>
                                         <p>{fullDetails.plot}</p>
-                                        <div className="buttons">
-                                            <button className={props?.user?.liked?.find(movie=>movie.id==props.movieData.id)? 'active':''} onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
-                                            <button><i className="fa-solid fa-thumbs-down"></i>   I hated this movie!</button>
-                                            <button onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
+                                        <div className="buttons" style={props.profile ? {display:"none"}: {display:"flex"} }>
+                                            <button  className={props?.user?.liked?.find(movie=>movie.id==props.movieData.id)? 'active':''} onClick={likedFunction}><i className="fa-solid fa-thumbs-up"></i>   I liked this movie!</button>
+                                            <button  onClick={addPlaylist}><i className="fa-solid fa-bookmark"></i>  Add to a playlist</button>
 
                                         </div>
                                         <div className="platforms">
