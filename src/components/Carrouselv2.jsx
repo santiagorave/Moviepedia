@@ -1,15 +1,14 @@
-import Movie from "../classes/Movie";
 import { useState } from "react";
 import Popular from "../data/Popular-TV.json"
 //fake data for carrousel test
-let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg"},
-{id:1,name:"pocajonta",src:"https://lumiere-a.akamaihd.net/v1/images/p_mulan_20529_83d3893a.jpeg?region=0%2C0%2C513%2C810"},
-{id:2,name:"cars",src:"https://lumiere-a.akamaihd.net/v1/images/p_cars_19643_4405006d.jpeg"}];
+// let fakeData = [{id:0,name:"avatar",src:"https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_avatarthewayofwater_1710_b7d39b03.jpeg"},
+// {id:1,name:"pocajonta",src:"https://lumiere-a.akamaihd.net/v1/images/p_mulan_20529_83d3893a.jpeg?region=0%2C0%2C513%2C810"},
+// {id:2,name:"cars",src:"https://lumiere-a.akamaihd.net/v1/images/p_cars_19643_4405006d.jpeg"}];
 
 
 
 function Container(){
-    const [slide,setSlide]=useState(1);
+    const [slide,setSlide]=useState(0);
     let rightHandler = function() {
     if (slide === Popular.items.length - 1) {
       setSlide(0);
@@ -18,13 +17,13 @@ function Container(){
     }
   };
     let leftHandler = function() {
-    if (slide === 1) {
+    if (slide === 0) {
       setSlide(Popular.items.length - 1);
     } else {
       setSlide(slide - 1);
     }
   };
-//   console.log(JSON.stringify(Popular.items[0].image));
+    //console.log(JSON.stringify(Popular.items[0].image));
     
     function BackGround(props){
         return(
@@ -34,9 +33,9 @@ function Container(){
         );
     }
     function Slides(props){
-        const imgId = parseInt(Popular.items.rank)
+        // const imgId = parseInt(Popular.items.rank)
         return(
-            <figure className="slides" >
+            <figure className="slides">
                 <img  src={Popular.items[slide].image} alt={props.alt}/>
             </figure>
         );   
