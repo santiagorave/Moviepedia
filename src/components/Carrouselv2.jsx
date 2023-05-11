@@ -34,16 +34,16 @@ function Container(){
         );
     }
     function Slides(props){
-        const imgId = parseInt(props.id)
+        const imgId = parseInt(Popular.items.rank)
         return(
-            <figure className="slides" id={props.id}>
-                <img hidden={imgId==slide?false:true} src={Popular.items[slide].image} alt={props.alt}/>
+            <figure className="slides" >
+                <img  src={Popular.items[slide].image} alt={props.alt}/>
             </figure>
         );   
     }
     return(
         <section className="liked">
-            {
+            {/* {
                 Popular.items.map(
                     (bg)=>(
                         <BackGround
@@ -51,10 +51,11 @@ function Container(){
                         />
                     )
                 )
-            }
+            } */}
+            <BackGround/>
             <section>
                 <div id="slides">
-                    {
+                    {/* {
                         Popular.items.map(
                             (data) =>(
                                 <Slides
@@ -64,7 +65,8 @@ function Container(){
                                 />
                             )
                         )
-                    }
+                    } */}
+                    <Slides/>
                 </div>
                 <div id="navigation">
                     <i className="fa-solid fa-chevron-left" onClick={leftHandler} id="likel"></i>
