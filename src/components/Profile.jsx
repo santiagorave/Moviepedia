@@ -37,7 +37,7 @@ function Profile(props){
         <>
             <nav id="ProfileNav" className="ProfileNav">
                 <Link className="ProfileNav-Link"state={{state:state.state,users:state.users}} to='/' > 
-                    <h1>Logo</h1> 
+                    <img src="/src/data/LogoMP.png" alt="mainlogo-02"/>
                 </Link>
             </nav>
 
