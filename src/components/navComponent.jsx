@@ -62,7 +62,7 @@ function Nav(props) {
         <>
             {searchModal && <Modal user={props.userState} handler={clickHandlerChild} movieData={data.current} />}
             <nav>
-                <h1> Logo </h1>
+                <img src="/src/data/LogoMP.png" alt="mainlogo-pic"/>
 
                 <form action="#">
                     <section>
