@@ -4,7 +4,7 @@ import GetData from './components/GetData'
 import LoginModal from './components/loginModal';
 import SignUpModal from './components/SignUpModal';
 import { useLocation } from "react-router-dom";
-
+import MainCarrousel from './components/Carrouselv2'
 import User from './classes/User';
 
 // father 
@@ -60,6 +60,7 @@ function App() {
     {modalLogin && <LoginModal userCallback={userHandler} authUsers={users} modalSignUpState={setModalsignUp} modalLoginState={setModalLogin} />}
     {/* if signUp is true : <SignUpModal modalSignUpState={setModalsignUp}/>}
     <Nav modalLoginState={setModalLogin}/> happens */}
+    <MainCarrousel data={GET_TV}/>
     {/* give the function userHandler to the son */}
     {signUp && <SignUpModal allUsers={users} changeUsers={setUsers} userCallback={userHandler} modalSignUpState={setModalsignUp}/>}
     {/* at the nav the method setModalLogin is true*/}
